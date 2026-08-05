@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refleksi Semester 01 — E-Portfolio Rahma</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body data-page="refleksi-sem01">
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="nav-logo">
+    <span class="path">~/</span>e-portfolio
+  </div>
+<!-- 🔹 HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html#home">home</a></li>
+    <li><a href="index.html#profil">profil</a></li>
+    <li><a href="index.html#model-guru">model guru</a></li>
+
+    <!-- dropdown: refleksi -->
+    <li class="nav-dropdown" id="nav-dropdown-refleksi">
+      <a href="#ringkasan-refleksi" class="nav-dropdown-toggle">refleksi ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="refleksi-sem01.html"><span class="dd-num">01</span> Semester 01</a>
+        <a href="refleksi-sem02.html"><span class="dd-num">02</span> Semester 02</a>
+        <a href="refleksi-ppg.html"><span class="dd-num">03</span> Refleksi PPG</a>
+      </div>
+    </li>
+
+    <li><a href="index.html#kontak">kontak</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    <span class="status-full">Semester 01 • PPG Prajabatan 2026</span>
+    <span class="status-short">Semester 01</span>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+<!-- HERO -->
+<div class="refleksi-hero">
+  <div class="refleksi-hero-inner">
+    <div class="page-badge">seminar ppg · refleksi mata kuliah</div>
+    <h1 style="font-family:var(--sans);font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.1;margin-bottom:0.8rem;">
+      <span style="color:var(--amber);">Refleksi</span>
+      <br><span style="font-size:clamp(3rem,6vw,5rem);font-weight:1000;">Semester 1</span>
+    </h1>
+    <p style="color:var(--muted);font-size:0.9rem;max-width:620px;line-height:1.8;">
+      Refleksi pembelajaran untuk setiap mata kuliah yang ditempuh pada semester 1, lengkap dengan lampiran tugas yang menjadi dasar penulisan refleksi.
+    </p>
+    <div class="semester-summary" style="margin-top:2rem;">
+      <div class="sem-stat"><div class="sem-stat-num">6</div><div class="sem-stat-label">mata kuliah</div></div>
+      <div class="sem-stat"><div class="sem-stat-num">6</div><div class="sem-stat-label">refleksi</div></div>
+      <div class="sem-stat"><div class="sem-stat-num">Sem 1</div><div class="sem-stat-label">2025/2026</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- LIST MATKUL -->
+<section class="reveal">
+  <div class="prompt"><span class="prompt-path">~/refleksi/semester-1</span></div>
+  <div class="sec-label">01 // daftar mata kuliah</div>
+  <h2 style="font-size:1.5rem;">Refleksi per Mata Kuliah</h2>
+  <p class="lead">Klik judul mata kuliah untuk membuka refleksi lengkap beserta lampiran tugas pendukungnya.</p>
+
+  <div class="matkul-list">
+    <div class="rp-card" style="margin-bottom:2rem;">
+      <div class="rp-card-header">
+        <div class="rp-num">?</div>
+        <div class="rp-question">Pertanyaan panduan refleksi (sama untuk semua mata kuliah)</div>
+      </div>
+      <div class="rp-card-body">
+        <ol style="font-size:0.86rem;color:var(--muted);line-height:1.9;margin:0 0 0 1.2rem;padding:0;">
+          <li>Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru? </li>
+          <li>Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?</li>
+          <li>Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?</li>
+          <li>Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini?</li>
+          <li>Mengapa artefak tersebut yang saya pilih?</li>
+          <li>Bagian mana dari artefak ini yang mendukung hasil refleksi saya? </li>
+        </ol>
+        <p style="font-size:0.78rem;color:var(--muted2);margin-top:0.8rem;">Jawaban lengkap untuk pertanyaan-pertanyaan di atas ada di masing-masing PDF pada setiap mata kuliah di bawah.</p>
+      </div>
+    </div>
+
+    <!-- ============ MATKUL 1 ============ -->
+    <div class="matkul-card open" id="mk1">
+      <div class="matkul-header" onclick="toggleMatkul('mk1')">
+        <div class="matkul-num">01</div>
+        <div class="matkul-header-text">
+          <div class="matkul-name">Nama Mata Kuliah 1</div>
+          <div class="matkul-meta">Dosen Pengampu · Kode MK · 2 SKS</div>
+        </div>
+        <span class="matkul-status">selesai</span>
+        <div class="matkul-chevron">▾</div>
+      </div>
+      <div class="matkul-body">
+        <div class="matkul-body-inner">
+          <div class="attach-cols">
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">📄 jawaban refleksi</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">📄</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Refleksi Nama Mata Kuliah 1.pdf</div>
+                  <div class="lampiran-desc">PDF · jawaban pertanyaan panduan</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_JAWABAN" target="_blank" class="lampiran-open-btn">↗ buka pdf</a>
+              </div>
+            </div>
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">🗂️ artefak pendukung</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">🗂️</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Nama Tugas/Projek yang Dibahas</div>
+                  <div class="lampiran-desc">Contoh: Modul Ajar 2, LKPD, dsb</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_ARTEFAK" target="_blank" class="lampiran-open-btn">↗ buka</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MATKUL 2 ============ -->
+    <div class="matkul-card open" id="mk2">
+      <div class="matkul-header" onclick="toggleMatkul('mk2')">
+        <div class="matkul-num">02</div>
+        <div class="matkul-header-text">
+          <div class="matkul-name">Nama Mata Kuliah 2</div>
+          <div class="matkul-meta">Dosen Pengampu · Kode MK · 2 SKS</div>
+        </div>
+        <span class="matkul-status">selesai</span>
+        <div class="matkul-chevron">▾</div>
+      </div>
+      <div class="matkul-body">
+        <div class="matkul-body-inner">
+          <div class="attach-cols">
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">📄 jawaban refleksi</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">📄</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Refleksi Nama Mata Kuliah 2.pdf</div>
+                  <div class="lampiran-desc">PDF · jawaban pertanyaan panduan</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_JAWABAN" target="_blank" class="lampiran-open-btn">↗ buka pdf</a>
+              </div>
+            </div>
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">🗂️ artefak pendukung</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">🗂️</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Nama Tugas/Projek yang Dibahas</div>
+                  <div class="lampiran-desc">Contoh: Modul Ajar 2, LKPD, dsb</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_ARTEFAK" target="_blank" class="lampiran-open-btn">↗ buka</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MATKUL 3 ============ -->
+    <div class="matkul-card open" id="mk3">
+      <div class="matkul-header" onclick="toggleMatkul('mk3')">
+        <div class="matkul-num">03</div>
+        <div class="matkul-header-text">
+          <div class="matkul-name">Nama Mata Kuliah 3</div>
+          <div class="matkul-meta">Dosen Pengampu · Kode MK · 2 SKS</div>
+        </div>
+        <span class="matkul-status">selesai</span>
+        <div class="matkul-chevron">▾</div>
+      </div>
+      <div class="matkul-body">
+        <div class="matkul-body-inner">
+          <div class="attach-cols">
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">📄 jawaban refleksi</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">📄</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Refleksi Nama Mata Kuliah 3.pdf</div>
+                  <div class="lampiran-desc">PDF · jawaban pertanyaan panduan</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_JAWABAN" target="_blank" class="lampiran-open-btn">↗ buka pdf</a>
+              </div>
+            </div>
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">🗂️ artefak pendukung</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">🗂️</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Nama Tugas/Projek yang Dibahas</div>
+                  <div class="lampiran-desc">Contoh: Modul Ajar 2, LKPD, dsb</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_ARTEFAK" target="_blank" class="lampiran-open-btn">↗ buka</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MATKUL 4 ============ -->
+    <div class="matkul-card open" id="mk4">
+      <div class="matkul-header" onclick="toggleMatkul('mk4')">
+        <div class="matkul-num">04</div>
+        <div class="matkul-header-text">
+          <div class="matkul-name">Nama Mata Kuliah 4</div>
+          <div class="matkul-meta">Dosen Pengampu · Kode MK · 2 SKS</div>
+        </div>
+        <span class="matkul-status">selesai</span>
+        <div class="matkul-chevron">▾</div>
+      </div>
+      <div class="matkul-body">
+        <div class="matkul-body-inner">
+          <div class="attach-cols">
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">📄 jawaban refleksi</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">📄</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Refleksi Nama Mata Kuliah 4.pdf</div>
+                  <div class="lampiran-desc">PDF · jawaban pertanyaan panduan</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_JAWABAN" target="_blank" class="lampiran-open-btn">↗ buka pdf</a>
+              </div>
+            </div>
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">🗂️ artefak pendukung</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">🗂️</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Nama Tugas/Projek yang Dibahas</div>
+                  <div class="lampiran-desc">Contoh: Modul Ajar 2, LKPD, dsb</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_ARTEFAK" target="_blank" class="lampiran-open-btn">↗ buka</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MATKUL 5 ============ -->
+    <div class="matkul-card open" id="mk5">
+      <div class="matkul-header" onclick="toggleMatkul('mk5')">
+        <div class="matkul-num">05</div>
+        <div class="matkul-header-text">
+          <div class="matkul-name">Nama Mata Kuliah 5</div>
+          <div class="matkul-meta">Dosen Pengampu · Kode MK · 2 SKS</div>
+        </div>
+        <span class="matkul-status">selesai</span>
+        <div class="matkul-chevron">▾</div>
+      </div>
+      <div class="matkul-body">
+        <div class="matkul-body-inner">
+          <div class="attach-cols">
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">📄 jawaban refleksi</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">📄</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Refleksi Nama Mata Kuliah 5.pdf</div>
+                  <div class="lampiran-desc">PDF · jawaban pertanyaan panduan</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_JAWABAN" target="_blank" class="lampiran-open-btn">↗ buka pdf</a>
+              </div>
+            </div>
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">🗂️ artefak pendukung</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">🗂️</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Nama Tugas/Projek yang Dibahas</div>
+                  <div class="lampiran-desc">Contoh: Modul Ajar 2, LKPD, dsb</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_ARTEFAK" target="_blank" class="lampiran-open-btn">↗ buka</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ MATKUL 6 ============ -->
+    <div class="matkul-card open" id="mk6">
+      <div class="matkul-header" onclick="toggleMatkul('mk6')">
+        <div class="matkul-num">06</div>
+        <div class="matkul-header-text">
+          <div class="matkul-name">Nama Mata Kuliah 6</div>
+          <div class="matkul-meta">Dosen Pengampu · Kode MK · 2 SKS</div>
+        </div>
+        <span class="matkul-status">selesai</span>
+        <div class="matkul-chevron">▾</div>
+      </div>
+      <div class="matkul-body">
+        <div class="matkul-body-inner">
+          <div class="attach-cols">
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">📄 jawaban refleksi</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">📄</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Refleksi Nama Mata Kuliah 6.pdf</div>
+                  <div class="lampiran-desc">PDF · jawaban pertanyaan panduan</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_JAWABAN" target="_blank" class="lampiran-open-btn">↗ buka pdf</a>
+              </div>
+            </div>
+
+            <div class="lampiran-box">
+              <div class="lampiran-box-label">🗂️ artefak pendukung</div>
+              <div class="lampiran-attach">
+                <div class="lampiran-thumb">🗂️</div>
+                <div class="lampiran-info">
+                  <div class="lampiran-name">Nama Tugas/Projek yang Dibahas</div>
+                  <div class="lampiran-desc">Contoh: Modul Ajar 2, LKPD, dsb</div>
+                </div>
+                <a href="GANTI_LINK_GDRIVE_ARTEFAK" target="_blank" class="lampiran-open-btn">↗ buka</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div><div class="footer-logo">e-portfolio · ppg prajabatan 2026</div><div style="margin-top:4px;">Rahma Hayuning Astuti · Informatika · UNY</div></div>
+  <div class="footer-r"><span>built with ♥ &amp; caffeine</span><span style="color:var(--border2);">|</span><span>github pages</span></div>
+</footer>
+
+</div>
+<script src="shared.js"></script>
+</body>
+</html>
