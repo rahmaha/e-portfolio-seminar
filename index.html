@@ -1,462 +1,639 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E-Portfolio — Rahma Hayuning Astuti</title>
-<link rel="stylesheet" href="shared.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Seminar Pendidikan PPG - Rahma Hayuning Astuti, S.Kom.</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-page="index">
-<div class="grid-bg"></div>
+<body class="min-h-screen flex flex-col relative pb-12">
 
-<nav>
-  <div class="nav-logo">
-    <span class="path">~/</span>e-portfolio
-  </div>
-<!-- 🔹 HAMBURGER -->
-  <div class="menu-toggle" id="menu-toggle">☰</div>
+    <!-- DESK ACCESSORIES (BACKGROUND DECORATION) -->
+    <!-- Top Left Stationery: Pencil -->
+    <div class="fixed -top-6 left-4 md:left-12 z-0 pointer-events-none opacity-90 hidden sm:block">
+        <svg class="w-36 h-36 transform -rotate-45 drop-shadow-md" viewBox="0 0 200 200" fill="none">
+            <rect x="20" y="80" width="140" height="18" rx="2" fill="#eab308" stroke="#1e293b" stroke-width="3"/>
+            <polygon points="160,80 190,89 160,98" fill="#fde047" stroke="#1e293b" stroke-width="3"/>
+            <polygon points="180,86 190,89 180,92" fill="#1e293b"/>
+            <rect x="10" y="80" width="10" height="18" rx="2" fill="#f43f5e" stroke="#1e293b" stroke-width="3"/>
+        </svg>
+    </div>
 
-  <ul class="nav-links">
-    <li><a href="#home">home</a></li>
-    <li><a href="#profil">profil</a></li>
-    <li><a href="#model-guru">model guru</a></li>
-
-    <!-- dropdown: refleksi -->
-    <li class="nav-dropdown" id="nav-dropdown-refleksi">
-      <a href="#ringkasan-refleksi" class="nav-dropdown-toggle">refleksi ▾</a>
-      <div class="nav-dropdown-menu">
-        <a href="refleksi-sem01.html"><span class="dd-num">01</span> Semester 01</a>
-        <a href="refleksi-sem02.html"><span class="dd-num">02</span> Semester 02</a>
-        <a href="refleksi-ppg.html"><span class="dd-num">03</span> Refleksi PPG</a>
-      </div>
-    </li>
-
-    <li><a href="#kontak">kontak</a></li>
-  </ul>
-  <div class="nav-status">
-    <div class="status-dot"></div>
-    <span class="status-full">online • PPG Prajabatan 2026</span>
-    <span class="status-short">online</span>
-  </div>
-</nav>
-
-<div class="page-wrap">
-
-<!-- HOME -->
-<div id="home" style="background: var(--bg); min-height: 100vh; display:flex; align-items:center;">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-tag">ppg-prajabatan · informatika · 2026</div>
-      <h1 class="hero-title">
-        <span class="line1">E-Portfolio</span>
-        <span class="line2">Calon Guru</span>
-        <span class="line3">Profesional.</span>
-      </h1>
-      <p class="hero-desc">
-        Refleksi pengalaman belajar selama Program Pendidikan Profesi Guru (PPG). Mata Kuliah Seminar Pendidikan
-      </p>
-      <div class="hero-btns">
-        <a href="#profil" class="btn-primary">./explore.sh →</a>
-        <a href="#ringkasan-refleksi" class="btn-ghost">lihat refleksi</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num">2</div>
-          <div class="stat-label">semester</div>
+    <!-- Top Right Stationery: Red Sharpener & Star -->
+    <div class="fixed top-4 right-6 md:right-16 z-0 pointer-events-none hidden md:block">
+        <div class="relative w-16 h-16 bg-rose-500 border-2 border-gray-900 rounded-xl shadow-[3px_4px_0px_#000] rotate-12 flex items-center justify-center">
+            <div class="w-6 h-6 bg-gray-900 rounded-full flex items-center justify-center">
+                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+            </div>
+            <div class="absolute -bottom-1 -right-1 text-xs font-title bg-yellow-300 border border-black px-1 font-bold">100%</div>
         </div>
-        <div class="stat">
-          <div class="stat-num">4+</div>
-          <div class="stat-label">mata kuliah</div>
+    </div>
+
+    <!-- HEADER / NAVIGATION (BOOKMARK TABS) -->
+    <header class="sticky top-0 z-40 bg-desk-bg/95 backdrop-blur-sm pt-4 px-3 md:px-8 border-b-2 border-gray-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-end justify-between gap-3">
+
+            <!-- Logo Brand Title -->
+            <div class="flex items-center gap-3 mb-2 md:mb-0">
+                <div class="w-11 h-11 bg-calendar-blue border-2 border-gray-900 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-[2px_2px_0px_#000] rotate-[-3deg]">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h1 class="font-title text-xl md:text-2xl text-calendar-blue tracking-wide font-extrabold">PORTOFOLIO PPG</h1>
+                    <p class="text-xs font-bold text-gray-700">Mata Kuliah: <span class="bg-yellow-300 px-1.5 py-0.5 rounded border border-black font-title">Seminar Pendidikan</span></p>
+                </div>
+            </div>
+
+            <!-- Bookmark Navigation Tabs -->
+            <nav class="flex items-end overflow-x-auto gap-1 text-xs md:text-sm font-title pb-0 scrollbar-none">
+                <button onclick="switchTab('home')" id="tab-btn-home" class="nav-tab-btn active px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-house"></i> <span>Beranda</span>
+                </button>
+                <a href="refleksi-semester-1.html" id="tab-btn-sem1" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-book-open"></i> <span>Refleksi Sem 1</span>
+                </a>
+                <button onclick="switchTab('sem2')" id="tab-btn-sem2" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-book"></i> <span>Refleksi Sem 2</span>
+                </button>
+                <button onclick="switchTab('ppg')" id="tab-btn-ppg" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-award"></i> <span>Refleksi PPG</span>
+                </button>
+                <button onclick="switchTab('artefak')" id="tab-btn-artefak" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-folder-open"></i> <span>Artefak</span>
+                </button>
+                <button onclick="switchTab('profil')" id="tab-btn-profil" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-id-card"></i> <span>Profil</span>
+                </button>
+            </nav>
         </div>
-        <div class="stat">
-          <div class="stat-num">5+</div>
-          <div class="stat-label">refleksi</div>
+    </header>
+
+    <!-- MAIN CALENDAR DESK SHEET CONTAINER -->
+    <main class="max-w-7xl mx-auto px-3 md:px-8 mt-4 flex-grow w-full relative z-10">
+        <div class="calendar-sheet rounded-2xl p-4 md:p-8 min-h-[80vh] relative overflow-hidden">
+
+            <!-- ================= TAB 1: BERANDA / HOME ================= -->
+            <section id="page-home" class="page-content space-y-10">
+
+                <!-- HERO BANNER -->
+                <div class="relative bg-calendar-blue rounded-xl p-6 md:p-10 border-4 border-gray-900 shadow-[8px_10px_0px_#1e293b] text-white overflow-hidden">
+
+                    <div class="absolute inset-0 grid grid-cols-3 md:grid-cols-4 gap-2 opacity-15 pointer-events-none p-4">
+                        <div class="border border-white/40 p-2 font-title text-4xl text-white">7</div>
+                        <div class="border border-white/40 p-2 font-title text-4xl text-white">8</div>
+                        <div class="border border-white/40 p-2 font-title text-4xl text-white">15</div>
+                        <div class="border border-white/40 p-2 font-title text-4xl text-white">16</div>
+                    </div>
+
+                    <div class="absolute right-4 bottom-4 w-40 h-40 halftone-dots pointer-events-none"></div>
+
+                    <!-- Paperclip -->
+                    <div class="absolute top-3 right-6 md:right-10 z-20">
+                        <svg class="w-10 h-14 text-slate-300 drop-shadow-md" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Yellow Star Sticker -->
+                    <div class="absolute top-4 left-6 md:left-8 z-20 rotate-[-12deg] sticker-yellow-star">
+                        <div class="w-10 h-10 bg-yellow-400 border-2 border-black flex items-center justify-center font-bold text-gray-900 shadow-[2px_2px_0px_#000]" style="clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);">
+                        </div>
+                    </div>
+
+                    <!-- Banner Content -->
+                    <div class="relative z-10 max-w-3xl pt-2 space-y-4">
+                        <div class="inline-block bg-white text-gray-900 px-3 py-1 font-title font-bold text-sm md:text-base border-2 border-gray-900 shadow-[3px_3px_0px_#000] rotate-[-1.5deg]">
+                            portofolio seminar pendidikan
+                        </div>
+
+                        <h2 class="font-title text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-wide text-yellow-300 drop-shadow-[4px_4px_0px_#000] leading-none uppercase">
+                            JEJAK BELAJAR PPG
+                        </h2>
+
+                        <p class="text-blue-100 text-sm md:text-base font-body leading-relaxed max-w-2xl bg-calendar-blue-dark/60 p-3 rounded-lg border border-blue-400/30">
+                            Selamat datang di Portofolio Digital Refleksi Seminar Pendidikan PPG Prajabatan. Tempat mendokumentasikan jurnal refleksi 7 pertanyaan panduan LK2, pameran artefak pembelajaran inovatif Informatika, dan transformasi paradigma guru profesional.
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap gap-2 text-xs font-title">
+                            <span class="bg-yellow-300 text-gray-900 px-3 py-1 rounded border-2 border-black font-bold shadow-[2px_2px_0px_#000] flex items-center gap-1">
+                                <i class="fa-regular fa-calendar-check"></i> TAHUN 2026
+                            </span>
+                            <span class="bg-white text-gray-900 px-3 py-1 rounded border-2 border-black font-bold shadow-[2px_2px_0px_#000] flex items-center gap-1">
+                                <i class="fa-solid fa-graduation-cap"></i> UNY INFORMATIKA
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-3 right-8 z-20 flex items-center gap-3">
+                        <div class="w-8 h-8 bg-rose-500 border-2 border-black rounded-full flex items-center justify-center text-white text-sm shadow-[2px_2px_0px_#000] rotate-12">
+                            ❤️
+                        </div>
+                        <div class="text-rose-400 text-3xl hidden sm:block">
+                            ✿
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: POLAROID PROFILE & FILOSOFI TEACHING STICKY NOTE -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+
+                    <!-- POLAROID STUDENT CARD (4 cols) -->
+                    <div class="md:col-span-5 scrap-card p-5 rounded-lg bg-white relative rotate-[-1.5deg] hover:rotate-0 transition-transform">
+                        <div class="washi-tape"></div>
+                        <div class="washi-tape washi-tape-blue"></div>
+
+                        <!-- Polaroid Photo Frame -->
+                        <div class="bg-gray-100 border-2 border-gray-900 rounded p-2 mb-4 shadow-inner">
+                            <div class="aspect-[4/3] bg-gray-300 overflow-hidden rounded relative border border-gray-400 group">
+                                <img src="assets/profile-pict.png"
+                                     alt="Foto Rahma Hayuning Astuti, S.Kom."
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                     onerror="this.src='https://placehold.co/500x400/1a3a7c/ffffff?text=Rahma+Hayuning+Astuti,+S.Kom.'">
+                                <div class="absolute bottom-2 left-2 bg-yellow-300 border border-black px-2 py-0.5 text-[11px] font-hand font-bold text-gray-900">
+                                    Belajar AI, Berbagi Ilmu 💻✦
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Student Details -->
+                        <div class="space-y-2">
+                            <div class="text-center border-b-2 border-dashed border-gray-300 pb-2">
+                                <h3 class="font-title text-2xl text-calendar-blue font-bold">Rahma Hayuning Astuti, S.Kom.</h3>
+                                <p class="text-xs text-gray-600 font-bold">NIM: 25105260251 </p>
+                            </div>
+
+                            <div class="text-xs space-y-1.5 pt-1 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span class="font-bold text-gray-900">LPTK:</span>
+                                    <span>Universitas Negeri Yogyakarta</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-bold text-gray-900">Bidang Studi:</span>
+                                    <span class="bg-yellow-200 px-1 rounded font-semibold">Pendidikan Informatika</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-bold text-gray-900">Prodi:</span>
+                                    <span>PPG Prajabatan Gelombang I</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-3">
+                                <button onclick="switchTab('profil')" class="w-full py-2 bg-calendar-blue text-white font-title text-xs rounded border-2 border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 transition">
+                                    <i class="fa-solid fa-user-gear"></i> Lihat Profil Lengkap
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TEACHING PHILOSOPHY & MILESTONE (7 cols) -->
+                    <div class="md:col-span-7 space-y-6">
+
+                        <!-- STICKY NOTE: IDENTITAS DIRI, VISI & MISI -->
+                        <div class="sticky-note p-6 rounded-lg relative border-2 border-yellow-600 shadow-md rotate-[1deg]">
+                            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-5 h-5 bg-red-600 rounded-full border-2 border-black shadow-sm flex items-center justify-center">
+                                <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                            </div>
+
+                            <h3 class="font-title text-lg text-amber-900 font-bold mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-note-sticky text-yellow-700"></i> Siapa Aku: Visi &amp; Misi
+                            </h3>
+
+                            <p class="font-hand text-2xl text-gray-800 leading-snug">
+                                "Menjadi praktisi AI &amp; machine learning yang bisa menjelaskan hal rumit dengan sederhana, dan membangun teknologi yang bermanfaat bagi banyak orang."
+                            </p>
+
+                            <ul class="mt-3 space-y-1.5 text-xs text-gray-800 font-body leading-relaxed list-disc pl-4">
+                                <li>Terus belajar dan membangun proyek nyata (ML, data, RAG) sebagai bukti kemampuan.</li>
+                                <li>Membagikan ilmu lewat kode, tulisan, dan pengajaran yang mudah dipahami, termasuk kepada murid Informatika.</li>
+                                <li>Memakai teknologi secara etis dan berpusat pada manusia.</li>
+                            </ul>
+
+                            <div class="mt-3 pt-2 border-t border-amber-300 flex flex-wrap items-center gap-1.5 text-[11px] font-title font-bold text-amber-900">
+                                <span>Terinspirasi dari:</span>
+                                <span class="bg-white px-2 py-0.5 rounded border border-black">Andrej Karpathy</span>
+                                <span class="bg-white px-2 py-0.5 rounded border border-black">Andrew Ng</span>
+                                <span class="bg-white px-2 py-0.5 rounded border border-black">Fei-Fei Li</span>
+                            </div>
+                            <div class="mt-2 text-right font-title text-xs text-amber-900 font-bold">
+                                — Rahma Hayuning Astuti, S.Kom.
+                            </div>
+                        </div>
+
+                        <!-- PPG MILESTONE TIMELINE -->
+                        <div class="scrap-card p-5 rounded-xl bg-white space-y-4">
+                            <h3 class="font-title text-xl text-calendar-blue font-bold flex items-center justify-between border-b-2 border-gray-200 pb-2">
+                                <span><i class="fa-solid fa-timeline text-yellow-500"></i> Milestone Perjalanan PPG UNY</span>
+                                <span class="text-xs bg-yellow-300 px-2 py-0.5 rounded border border-black font-title">2026</span>
+                            </h3>
+
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-title">
+                                <div class="p-3 bg-blue-50 border-2 border-blue-400 rounded-lg">
+                                    <div class="text-2xl">📚</div>
+                                    <div class="text-xs font-bold text-blue-900 mt-1">6 Matkul Sem 1</div>
+                                    <div class="text-[10px] text-gray-500"></div>
+                                </div>
+                                <div class="p-3 bg-yellow-50 border-2 border-yellow-400 rounded-lg">
+                                    <div class="text-2xl">🏫</div>
+                                    <div class="text-xs font-bold text-yellow-900 mt-1">PPL Terbimbing</div>
+                                    <div class="text-[10px] text-gray-500">SMK N 2 Depok Sleman</div>
+                                </div>
+                                <div class="p-3 bg-emerald-50 border-2 border-emerald-400 rounded-lg">
+                                    <div class="text-2xl">💻</div>
+                                    <div class="text-xs font-bold text-emerald-900 mt-1">6 Matkul Sem 2</div>
+                                    <div class="text-[10px] text-gray-500"></div>
+                                </div>
+                                <div class="p-3 bg-purple-50 border-2 border-purple-400 rounded-lg">
+                                    <div class="text-2xl">🎓</div>
+                                    <div class="text-xs font-bold text-purple-900 mt-1">Seminar PPG</div>
+                                    <div class="text-[10px] text-gray-500"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- QUICK REFLECTION LINK CARDS -->
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-title text-2xl text-gray-900 font-bold flex items-center gap-2">
+                            <i class="fa-solid fa-folder-bookmark text-calendar-blue"></i> Peta Refleksi Seminar Pendidikan
+                        </h3>
+                        <span class="text-xs font-bold text-gray-500">Pilih Tab untuk Membaca Refleksi</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+                        <!-- CARD 1: SEMESTER 1 -->
+                        <div onclick="location.href='refleksi-semester-1.html'" class="scrap-card p-6 rounded-xl bg-yellow-100/80 cursor-pointer group hover:bg-yellow-200 transition relative">
+                            <div class="washi-tape"></div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-3xl">📖</span>
+                                <span class="bg-white border border-black font-title text-[11px] font-bold px-2 py-0.5 rounded shadow-[1px_1px_0px_#000]">SEM 1</span>
+                            </div>
+                            <h4 class="font-title text-lg font-bold text-gray-900 group-hover:text-calendar-blue transition">Refleksi Semester 1</h4>
+                            <p class="text-xs text-gray-700 mt-2 leading-relaxed">
+                                Filosofi, PPDP, Asesmen, PPL I, Mindset, & Inovatif
+                            </p>
+                            <div class="mt-4 pt-2 border-t border-yellow-300 flex items-center justify-between text-xs font-title font-bold text-calendar-blue">
+                                <span>6 Mata Kuliah</span>
+                                <span>Buka →</span>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: SEMESTER 2 -->
+                        <div onclick="switchTab('sem2')" class="scrap-card p-6 rounded-xl bg-blue-100/80 cursor-pointer group hover:bg-blue-200 transition relative">
+                            <div class="washi-tape washi-tape-blue"></div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-3xl">📘</span>
+                                <span class="bg-white border border-black font-title text-[11px] font-bold px-2 py-0.5 rounded shadow-[1px_1px_0px_#000]">SEM 2</span>
+                            </div>
+                            <h4 class="font-title text-lg font-bold text-gray-900 group-hover:text-calendar-blue transition">Refleksi Semester 2</h4>
+                            <p class="text-xs text-gray-700 mt-2 leading-relaxed">
+                                PSE, PMAL, PKB, PPL Mandiri, Seminar, Proyek Kepemimpinan                        </p>
+                            <div class="mt-4 pt-2 border-t border-blue-300 flex items-center justify-between text-xs font-title font-bold text-calendar-blue">
+                                <span>6 Mata Kuliah</span>
+                                <span>Buka →</span>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: REFLEKSI PPG -->
+                        <div onclick="switchTab('ppg')" class="scrap-card p-6 rounded-xl bg-purple-100/80 cursor-pointer group hover:bg-purple-200 transition relative">
+                            <div class="washi-tape washi-tape-pink"></div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="text-3xl">🎓</span>
+                                <span class="bg-white border border-black font-title text-[11px] font-bold px-2 py-0.5 rounded shadow-[1px_1px_0px_#000]">AKHIR PPG</span>
+                            </div>
+                            <h4 class="font-title text-lg font-bold text-gray-900 group-hover:text-calendar-blue transition">Refleksi Keseluruhan PPG</h4>
+                            <p class="text-xs text-gray-700 mt-2 leading-relaxed">
+                            </p>
+                            <div class="mt-4 pt-2 border-t border-purple-300 flex items-center justify-between text-xs font-title font-bold text-calendar-blue">
+                                <span></span>
+                                <span>Buka →</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                            <!-- KONTAK KU -->
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-title text-2xl text-gray-900 font-bold flex items-center gap-2">
+                            <i class="fa-solid fa-address-book text-calendar-blue"></i> Kontak Ku
+                        </h3>
+                        <span class="text-xs font-bold text-gray-500">Yuk, terhubung</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <a href="mailto:rahma.hayuning@student.uny.ac.id" class="scrap-card p-5 rounded-xl bg-yellow-100/80 hover:bg-yellow-200 transition relative flex items-center gap-4">
+                            <div class="washi-tape"></div>
+                            <i class="fa-solid fa-envelope text-red-500 text-3xl"></i>
+                            <div>
+                                <div class="font-title font-bold text-gray-900">Email Akademik UNY</div>
+                                <div class="text-xs text-gray-700 break-all">rahmahayuning2025@student.uny.ac.id</div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.youtube.com/@Rahma_InformatikaEdu" target="_blank" rel="noopener" class="scrap-card p-5 rounded-xl bg-blue-100/80 hover:bg-blue-200 transition relative flex items-center gap-4">
+                            <div class="washi-tape washi-tape-blue"></div>
+                            <i class="fa-brands fa-youtube text-red-600 text-3xl"></i>
+                            <div>
+                                <div class="font-title font-bold text-gray-900">Saluran YouTube Praktik PPL</div>
+                                <div class="text-xs text-gray-700">@Rahma_InformatikaEdu</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================= TAB 3: REFLEKSI SEMESTER 2 ================= -->
+            <section id="page-sem2" class="page-content hidden space-y-6">
+
+                <div class="scrap-card p-6 rounded-xl bg-calendar-blue text-white">
+                    <span class="bg-yellow-300 text-gray-900 border border-black font-title text-xs font-bold px-2.5 py-1 rounded mb-2 inline-block">
+                        SEMESTER 2 // UNY INFORMATIKA
+                    </span>
+                    <h2 class="font-title text-3xl md:text-4xl font-extrabold text-white">
+                        Refleksi Semester 2
+                    </h2>
+                    <p class="text-xs md:text-sm text-blue-100 mt-1">
+                        Ulasan lanjutan mencakup Pembelajaran Berdiferensiasi, Proyek Kepemimpinan, Asesmen II, & PPL Mandiri II.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Card 1 -->
+                    <div class="scrap-card p-6 rounded-xl bg-white relative">
+                        <div class="washi-tape"></div>
+                        <span class="bg-yellow-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black mb-2 inline-block">MATA KULIAH</span>
+                        <h3 class="font-title text-xl font-bold text-gray-900">Pembelajaran Berdiferensiasi Informatika</h3>
+                        <p class="text-xs text-gray-600 mt-2 font-body leading-relaxed">
+                            Menerapkan diferensiasi konten, proses, dan produk pada praktikum jaringan komputer dan koding Scratch untuk mengakomodasi berbagai kecepatan nalar siswa.
+                        </p>
+                        <div class="mt-4 pt-3 border-t border-gray-200 flex items-center justify-between text-xs font-title font-bold">
+                            <a href="https://drive.google.com" target="_blank" class="text-calendar-blue hover:underline"><i class="fa-solid fa-paperclip"></i> Lihat Artefak Modul</a>
+                            <button onclick="openModalWithCustomData('Pembelajaran Berdiferensiasi', 'Penerapan strategi diferensiasi produk koding.', 'Siswa sangat terdorong karena dapat memilih output poster, video, atau skrip kode.', 'Modul Ajar Berdiferensiasi & Rubrik Penilaian', 'Rutin menerapkan tes diagnostik di awal bab baru.')" class="px-3 py-1 bg-yellow-300 text-gray-900 rounded border border-black shadow-[2px_2px_0px_#000]">
+                                Baca Refleksi →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="scrap-card p-6 rounded-xl bg-white relative">
+                        <div class="washi-tape washi-tape-blue"></div>
+                        <span class="bg-blue-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black mb-2 inline-block">MATA KULIAH</span>
+                        <h3 class="font-title text-xl font-bold text-gray-900">Proyek Kepemimpinan Gelombang I</h3>
+                        <p class="text-xs text-gray-600 mt-2 font-body leading-relaxed">
+                            Melaksanakan program pengabdian masyarakat: Pelatihan Pembuatan Media Pembelajaran Digital Canva & AI Edukasi untuk guru-guru sekolah sasaran.
+                        </p>
+                        <div class="mt-4 pt-3 border-t border-gray-200 flex items-center justify-between text-xs font-title font-bold">
+                            <a href="https://drive.google.com" target="_blank" class="text-calendar-blue hover:underline"><i class="fa-solid fa-paperclip"></i> Laporan Proyek</a>
+                            <button onclick="openModalWithCustomData('Proyek Kepemimpinan', 'Pengabdian masyarakat melalui workshop IT.', 'Melatih kepemimpinan sosial dan manajerial event edukasi.', 'Proposal, Laporan & Panduan Canva Edukasi', 'Melanjutkan kolaborasi pengabdian bersama MGMP Informatika.')" class="px-3 py-1 bg-yellow-300 text-gray-900 rounded border border-black shadow-[2px_2px_0px_#000]">
+                                Baca Refleksi →
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ================= TAB 4: REFLEKSI KESELURUHAN PPG ================= -->
+            <section id="page-ppg" class="page-content hidden space-y-6">
+
+                <div class="scrap-card p-6 rounded-xl bg-calendar-blue text-white">
+                    <span class="bg-yellow-300 text-gray-900 border border-black font-title text-xs font-bold px-2.5 py-1 rounded mb-2 inline-block">
+                        SINTESIS HOLISTIK
+                    </span>
+                    <h2 class="font-title text-3xl md:text-4xl font-extrabold text-white">
+                        Refleksi Keseluruhan PPG Prajabatan
+                    </h2>
+                    <p class="text-xs md:text-sm text-blue-100 mt-1">
+                        Metamorfosis paradigma guru profesional berbasis Kerangka 4P (Peristiwa, Perasaan, Pembelajaran, Penerapan).
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- 4P Card 1: Peristiwa & Perasaan -->
+                    <div class="sticky-note p-6 rounded-xl border-2 border-amber-600 bg-yellow-100 rotate-[-0.5deg]">
+                        <h3 class="font-title text-lg font-bold text-amber-950 mb-2">1. Peristiwa (Facts) & 2. Perasaan (Feelings)</h3>
+                        <p class="text-xs text-gray-800 font-body leading-relaxed">
+                            Selama perjalanan 2 semester PPG Prajabatan Informatika di UNY, saya melewati fase pembelajaran perkuliahan yang padat serta PPL Terbimbing & Mandiri. Awalnya merasa cemas akan kompleksitas kurikulum merdeka, namun berubah menjadi bangga dan percaya diri setelah melihat keantusiasan murid dalam belajar Informatika.
+                        </p>
+                    </div>
+
+                    <!-- 4P Card 2: Pembelajaran & Penerapan -->
+                    <div class="sticky-note p-6 rounded-xl border-2 border-emerald-600 bg-emerald-100 rotate-[0.5deg]">
+                        <h3 class="font-title text-lg font-bold text-emerald-950 mb-2">3. Pembelajaran (Findings) & 4. Penerapan (Future)</h3>
+                        <p class="text-xs text-gray-800 font-body leading-relaxed">
+                            Pelajaran berharga yang diperoleh adalah bahwa mengajar Informatika bukan mentransfer teori komputer, melainkan memfasilitasi daya pikir komputasional murid. Ke depan, saya berkomitmen menjadi guru inovatif yang konsisten menerapkan diferensiasi dan pembentukan karakter Pancasila.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ================= TAB 5: ARTEFAK PEMBELAJARAN ================= -->
+            <section id="page-artefak" class="page-content hidden space-y-6">
+
+                <div class="scrap-card p-6 rounded-xl bg-calendar-blue text-white">
+                    <h2 class="font-title text-3xl font-extrabold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-folder-open text-yellow-400"></i> Galeri Artefak Pembelajaran Informatika
+                    </h2>
+                    <p class="text-xs md:text-sm text-blue-100 mt-1">
+                        Kumpulan bukti fisik dan digital hasil karya unggulan Rahma Hayuning Astuti, S.Kom.
+                    </p>
+                </div>
+
+                <!-- Artefact Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="artefact-cards-grid">
+                    <!-- Dynamic Artifact Cards populated by JS -->
+                </div>
+
+            </section>
+
+            <!-- ================= TAB 6: PROFIL MAHASISWA ================= -->
+            <section id="page-profil" class="page-content hidden space-y-8">
+
+                <div class="scrap-card p-6 md:p-8 rounded-xl bg-white relative">
+                    <div class="washi-tape"></div>
+                    <div class="washi-tape washi-tape-blue"></div>
+
+                   <div class="flex flex-col md:flex-row items-center gap-6 border-b-2 border-gray-200 pb-6">
+                        <div class="w-36 h-36 bg-gray-200 border-4 border-gray-900 rounded-full overflow-hidden shadow-[4px_4px_0px_#000] shrink-0">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+                                 alt="Foto Profil Rahma Hayuning Astuti, S.Kom." class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/400x400/1a3a7c/ffffff?text=Rahma+S.Kom.'">
+                        </div>
+                        <div class="text-center md:text-left space-y-2">
+                            <span class="bg-yellow-300 text-gray-900 font-title text-xs font-bold px-2.5 py-1 rounded border border-black">
+                                MAHASISWA PPG PRAJABATAN UNY
+                            </span>
+                            <h2 class="font-title text-3xl font-extrabold text-calendar-blue">Rahma Hayuning Astuti, S.Kom.</h2>
+                            <p class="text-xs text-gray-600 font-bold">NIM: 230119904281 | LPTK Universitas Negeri Yogyakarta</p>
+                            <p class="text-xs text-gray-700 max-w-2xl font-body leading-relaxed">
+                                Calon Pendidik Informatika profesional yang berdedikasi menciptakan suasana belajar ramah anak, berpusat pada murid, dan berbasis pemikiran komputasional Abad 21.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+                        <!-- Left Column: Competencies & Info -->
+                        <div class="space-y-4">
+                            <h3 class="font-title text-lg font-bold text-gray-900 flex items-center gap-2">
+                                <i class="fa-solid fa-award text-yellow-500"></i> Kompetensi Guru Profesional
+                            </h3>
+                            <ul class="space-y-2 text-xs text-gray-700">
+                                <li class="p-2.5 bg-yellow-50 rounded border border-yellow-300 flex items-center justify-between">
+                                    <span>Penyusunan Modul Ajar Berdiferensiasi Informatika</span>
+                                    <span class="font-title text-emerald-700 font-bold">Sangat Baik</span>
+                                </li>
+                                <li class="p-2.5 bg-blue-50 rounded border border-blue-300 flex items-center justify-between">
+                                    <span>Penguasaan Media Digital (Scratch, Python, Canva, AI)</span>
+                                    <span class="font-title text-emerald-700 font-bold">Mahir</span>
+                                </li>
+                                <li class="p-2.5 bg-purple-50 rounded border border-purple-300 flex items-center justify-between">
+                                    <span>Manajemen Kelas & Praktikum Lab Komputer</span>
+                                    <span class="font-title text-emerald-700 font-bold">Teruji PPL</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Right Column: Contact -->
+                        <div class="space-y-4">
+                            <h3 class="font-title text-lg font-bold text-gray-900 flex items-center gap-2">
+                                <i class="fa-solid fa-address-book text-calendar-blue"></i> Kontak & Media Pembelajaran
+                            </h3>
+                            <div class="space-y-2 text-xs">
+                                <a href="mailto:rahma.hayuning@student.uny.ac.id" class="p-3 bg-gray-50 hover:bg-yellow-100 rounded border border-gray-300 flex items-center gap-3 transition">
+                                    <i class="fa-solid fa-envelope text-red-500 text-lg"></i>
+                                    <div>
+                                        <div class="font-bold">Email Akademik UNY</div>
+                                        <div class="text-gray-500">rahma.hayuning@student.uny.ac.id</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.youtube.com/@Rahma_InformatikaEdu" target="_blank" rel="noopener" class="p-3 bg-gray-50 hover:bg-yellow-100 rounded border border-gray-300 flex items-center gap-3 transition">
+                                    <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
+                                    <div>
+                                        <div class="font-bold">Saluran Youtube Praktik PPL</div>
+                                        <div class="text-gray-500">@Rahma_InformatikaEdu</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
         </div>
-        <div class="stat">
-          <div class="stat-num">6+</div>
-          <div class="stat-label">artefak</div>
-        </div>
-      </div>
-    </div>
+    </main>
 
-    <div class="terminal">
-      <div class="terminal-bar">
-        <div class="t-dot r"></div>
-        <div class="t-dot y"></div>
-        <div class="t-dot g"></div>
-        <div class="t-title">portfolio.json </div>
-      </div>
-      <div class="terminal-body">
-        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd"> cat portfolio.json</span></div>
-        <div class="t-line gap"></div>
+    <!-- ================= DETAIL REFLECTION MODAL (7 PERTANYAAN) ================= -->
+    <div id="reflection-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+        <div class="relative w-full max-w-4xl bg-white border-4 border-gray-900 rounded-2xl shadow-[10px_14px_0px_rgba(0,0,0,0.9)] p-5 md:p-8 max-h-[90vh] overflow-y-auto my-6">
 
-        <div class="t-line"><span class="t-out">{</span></div>
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 bg-rose-500 text-white rounded-full border-2 border-black flex items-center justify-center font-bold shadow-[2px_2px_0px_#000] hover:bg-rose-600 transition">
+                ✕
+            </button>
 
-        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-str">"Rahma Hayuning Astuti"</span>,</span></div>
-        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"program"</span>: <span class="t-str">"PPG Prajabatan"</span>,</span></div>
-        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"bidang"</span>: <span class="t-str">"Informatika"</span>,</span></div>
+            <div class="border-b-2 border-gray-800 pb-4 mb-6">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <span id="modal-code" class="bg-yellow-300 text-gray-900 font-title text-xs font-bold px-2 py-0.5 rounded border border-black"></span>
+                    <span id="modal-sks" class="text-xs text-gray-600 font-bold"></span>
+                </div>
+                <h3 id="modal-title" class="font-title text-2xl md:text-3xl text-calendar-blue font-extrabold leading-tight"></h3>
+                <p id="modal-lecturers" class="text-xs text-gray-600 font-body mt-1"></p>
+            </div>
 
-        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-str">"Future Educator & IT Enthusiast"</span>,</span></div>
-        <br>
-        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-val">true</span>,</span></div>
-        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"angkatan"</span>: <span class="t-val">2026</span>,</span></div>
-        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"ready"</span>: <span class="t-val">true</span></span></div>
-        <div class="t-line"><span class="t-out">}</span></div>
-        <div class="t-line gap"></div>
-        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd"> <span class="t-cursor"></span></span></div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="space-y-4 text-xs md:text-sm text-gray-800">
+                <div id="modal-block-q1" class="p-4 bg-yellow-50 rounded-lg border-2 border-yellow-400">
+                    <h4 class="font-title text-sm font-bold text-yellow-900 mb-1 flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-yellow-400 text-gray-900 flex items-center justify-center text-xs shrink-0">1</span>
+                        Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?
+                    </h4>
+                    <p id="modal-q1" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
+                </div>
 
-<!-- PROFIL -->
-<section id="profil" class="reveal">
-  <div class="prompt"><span class="prompt-path">~/profil</span> — tentang saya</div>
-  <div class="sec-label">01 // profil mahasiswa</div>
-  <h2>Siapa Saya</h2>
-  <p class="lead">Calon pendidik bidang informatika dengan ketertarikan pada AI, Machine Learning, dan teknologi pembelajaran inovatif.</p>
-<div class="profil-grid">
+                <div id="modal-block-q2" class="p-4 bg-blue-50 rounded-lg border-2 border-blue-400">
+                    <h4 class="font-title text-sm font-bold text-blue-900 mb-1 flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-blue-400 text-gray-900 flex items-center justify-center text-xs shrink-0">2</span>
+                        Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?
+                    </h4>
+                    <p id="modal-q2" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
+                </div>
 
-  <!-- BARIS ATAS: foto + data diri -->
-  <div class="profil-top">
-    <div>
-      <div class="profil-card">
-        <div class="profil-card-top">
-          <div class="profil-avatar">
-            <img src="assets/foto-profil.png" alt="Foto Profil"
-              onerror="this.style.display='none';this.parentElement.innerHTML='RH'">
-          </div>
-          <div class="profil-name">Rahma Hayuning Astuti</div>
-          <div class="profil-role">// mahasiswa ppg prajabatan 2026</div>
-        </div>
-        <div class="profil-card-body">
-          <div class="profil-row"><span class="profil-row-k">NIM</span><span class="profil-row-v">25105260251</span></div>
-          <div class="profil-row"><span class="profil-row-k">Prodi</span><span class="profil-row-v">Pend. Informatika</span></div>
-          <div class="profil-row"><span class="profil-row-k">LPTK</span><span class="profil-row-v">Universitas Negeri Yogyakarta</span></div>
-          <div class="profil-row"><span class="profil-row-k">Angkatan</span><span class="profil-row-v">2026</span></div>
-          <div class="profil-row"><span class="profil-row-k">Sekolah Mitra</span><span class="profil-row-v">SMK N 2 Depok Sleman</span></div>
-          <div class="profil-row"><span class="profil-row-k">DPL</span><span class="profil-row-v">Dr. Ir. Drs. Masduki Zakariah, M.T</span></div>
-          <div class="profil-row"><span class="profil-row-k">Guru Pamong</span><span class="profil-row-v">Rusli Abdul Hamid, S.Pd</span></div>
-        </div>
-      </div>
-    </div>
+                <div id="modal-block-q3" class="p-4 bg-pink-50 rounded-lg border-2 border-pink-400">
+                    <h4 class="font-title text-sm font-bold text-pink-900 mb-1 flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-pink-400 text-gray-900 flex items-center justify-center text-xs shrink-0">3</span>
+                        Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?
+                    </h4>
+                    <p id="modal-q3" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
+                </div>
 
-    <!-- narasi asal daerah tetap di kanan foto, biar tidak terlalu sepi -->
-    <div class="narasi-section">
-      <div class="narasi-label">// asal &amp; keunikan daerah</div>
-      <p>Saya, Rahma Hayuning Astuti, lahir dan besar di <strong style="color:var(--text);">Demak, Jawa Tengah</strong> — kota yang dikenal sebagai salah satu pusat penyebaran Islam di Nusantara, dengan Masjid Agung Demak yang telah berdiri sejak abad ke-15 sebagai ikonnya. Tumbuh di lingkungan yang kental dengan nilai kebersamaan dan gotong royong mengajarkan saya bahwa belajar bukan proses yang soliter — melainkan sesuatu yang tumbuh subur ketika dilakukan bersama.</p>
-      <p style="margin-top:0.8rem;">Setelah menyelesaikan pendidikan S1 Teknik Informatika di <strong style="color:var(--text);">Universitas Dian Nuswantoro, Semarang</strong> pada tahun 2023, saya melanjutkan perjalanan ke Yogyakarta untuk menempuh Program PPG Prajabatan di Universitas Negeri Yogyakarta — membawa semangat dari kota wali untuk menjadi pendidik yang tidak hanya mengajarkan teknologi, tetapi juga nilai-nilai yang melampaui kode dan algoritma.</p>
-    </div>
-  </div>
+                <div id="modal-block-q4" class="p-4 bg-teal-50 rounded-lg border-2 border-teal-400">
+                    <h4 class="font-title text-sm font-bold text-teal-900 mb-1 flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-teal-400 text-gray-900 flex items-center justify-center text-xs shrink-0">4</span>
+                        Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?
+                    </h4>
+                    <p id="modal-q4" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
+                </div>
 
-  <!-- BARIS BAWAH: inspirasi full width -->
-  <div class="profil-bottom">
-    <div class="narasi-section">
-      <div class="narasi-label">// inspirasi &amp; tujuan menjadi guru</div>
+                <div id="modal-block-q5" class="p-4 bg-emerald-50 rounded-lg border-2 border-emerald-400">
+                    <h4 class="font-title text-sm font-bold text-emerald-900 mb-1 flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-emerald-400 text-gray-900 flex items-center justify-center text-xs shrink-0">5</span>
+                        Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini?
+                    </h4>
+                    <p id="modal-q5" class="leading-relaxed text-gray-700 whitespace-pre-line font-body mb-3"></p>
+                    <a id="modal-artifact-url" href="#" target="_blank" class="inline-flex items-center gap-2 text-xs font-title font-bold text-calendar-blue bg-white px-3 py-1.5 rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-yellow-200">
+                        <i class="fa-brands fa-google-drive text-yellow-500"></i> Buka Artefak di LMS Google Drive
+                    </a>
+                </div>
 
-      <div class="researcher-row">
-        <a class="researcher-card" href="https://karpathy.ai" target="_blank">
-          <div class="researcher-card-img">
-            <img src="https://karpathy.ai/assets/me_new.jpg"
-              alt="Andrej Karpathy"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="rc-initial" style="display:none;">AK</div>
-          </div>
-          <div class="researcher-card-body">
-            <div class="rc-name">Andrej Karpathy</div>
-            <div class="rc-role">ex-Tesla AI · ex-OpenAI · educator</div>
-            <div class="rc-quote">"The best teachers are the ones who make you feel like you can do it too."</div>
-          </div>
-        </a>
+                <div id="modal-block-q6" class="p-4 bg-orange-50 rounded-lg border-2 border-orange-400">
+                    <h4 class="font-title text-sm font-bold text-orange-900 mb-1 flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-orange-400 text-gray-900 flex items-center justify-center text-xs shrink-0">6</span>
+                        Mengapa artefak tersebut yang saya pilih?
+                    </h4>
+                    <p id="modal-q6" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
+                </div>
 
-        <a class="researcher-card" href="https://www.andrewng.org" target="_blank">
-          <div class="researcher-card-img">
-            <img src="https://www.andrewng.org/_next/image?url=%2Fimages%2Fandrew-ng-about-page.jpg&w=750&q=75&dpl=dpl_GrjjEjBVeDwiYUWkFBH9Ky4cc27Z"
-              alt="Andrew Ng"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="rc-initial" style="display:none;">AN</div>
-          </div>
-          <div class="researcher-card-body">
-            <div class="rc-name">Andrew Ng</div>
-            <div class="rc-role">Founder · Coursera &amp; DeepLearning.AI</div>
-            <div class="rc-quote">"AI is the new electricity. Just as electricity transformed industries, AI will transform every major industry."</div>
-          </div>
-        </a>
+                <div id="modal-block-q7" class="p-4 bg-purple-50 rounded-lg border-2 border-purple-400">
+                    <h4 class="font-title text-sm font-bold text-purple-900 mb-1 flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-purple-400 text-gray-900 flex items-center justify-center text-xs shrink-0">7</span>
+                        Bagian mana dari artefak ini yang mendukung hasil refleksi saya?
+                    </h4>
+                    <p id="modal-q7" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
+                </div>
+            </div>
 
-        <a class="researcher-card" href="https://profiles.stanford.edu/fei-fei-li" target="_blank">
-          <div class="researcher-card-img">
-            <img src="https://profiles.stanford.edu/proxy/api/cap/profiles/15052/resources/profilephoto/350x350.1550534393295.jpg"
-              alt="Fei-Fei Li"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="rc-initial" style="display:none;">FL</div>
-          </div>
-          <div class="researcher-card-body">
-            <div class="rc-name">Fei-Fei Li</div>
-            <div class="rc-role">Stanford HAI · ImageNet pioneer</div>
-            <div class="rc-quote">"There's nothing artificial about AI's potential to uplift human beings and serve as a universal empowerment tool."</div>
-          </div>
-        </a>
-      </div>
-
-      <p>Perjalanan saya menuju dunia pendidikan tidak dimulai dari cita-cita menjadi guru — melainkan dari kecintaan pada AI dan Machine Learning. Saya mengenal karya Andrej Karpathy, Andrew Ng, dan Fei-Fei Li bukan hanya karena kontribusi riset mereka, tetapi karena satu kesamaan yang saya kagumi: <strong style="color:var(--text);">kemampuan menjelaskan hal yang sangat kompleks dengan cara yang bisa dipahami siapa pun.</strong></p>
-      <p style="margin-top:0.8rem;">Karpathy menjelaskan neural network dari nol lewat YouTube dan ditonton jutaan orang. Andrew Ng membangun Coursera karena percaya pendidikan AI harus bisa diakses semua orang. Fei-Fei Li terus berbicara tentang AI yang berpusat pada manusia. Dari mereka saya belajar bahwa <em style="color:var(--amber);">menjadi ahli belum cukup — yang lebih penting adalah bagaimana kamu membawa pengetahuan itu ke orang lain.</em> Itulah yang ingin saya wujudkan sebagai guru informatika.</p>
-    </div>
-
-    <!-- Kutipan personal -->
-    <div class="kutipan-personal">
-      <div class="kutipan-personal-mark">"</div>
-      <div class="kutipan-personal-text">Saya tidak memilih jalan ini karena sudah merencanakan semuanya — tetapi justru di sinilah saya menemukan bahwa mengajar dan belajar adalah dua sisi dari hal yang sama. Jika para peneliti yang saya kagumi menghabiskan hidup mereka membuat ilmu yang rumit menjadi mudah dipahami, maka saya ingin melakukan hal yang sama di dalam kelas.</div>
-      <div class="kutipan-personal-src">— Rahma Hayuning Astuti, calon guru informatika</div>
-    </div>
-  </div>
-
-</div>
-</section>
-
-<!-- Refleksi -->
-<section id="ringkasan-refleksi" class="reveal">
-  <div class="prompt"><span class="prompt-path">~/refleksi</span> — ringkasan seluruh refleksi</div>
-  <div class="sec-label">02 // ringkasan refleksi</div>
-  <h2>Refleksi Pembelajaran</h2>
-  <p class="lead">refleksi tiap mata kuliah — klik <strong style="color:var(--amber);">lihat refleksi</strong> untuk membaca refleksi lengkap beserta lampiran tugas pendukungnya.</p>
-
-  <div class="media-filter">
-    <button class="filter-btn active" onclick="filterMedia('all',this)">semua</button>
-    <button class="filter-btn" onclick="filterMedia('sem1',this)">semester 01</button>
-    <button class="filter-btn" onclick="filterMedia('semini',this)">semester 02</button>
-    <button class="filter-btn" onclick="filterMedia('ppg',this)">refleksi ppg</button>
-  </div>
-
-  <div class="media-grid" id="mediaGrid">
-    <!-- ===== SEMESTER 1 (6 matkul, sesuaikan dgn refleksi-sem01.html) ===== -->
-    <div class="media-card" data-cat="sem1">
-      <div class="media-thumb"><div class="media-thumb-icon">📘</div><span class="media-type-badge badge-pdf">REFLEKSI</span><span class="media-siklus-badge">Semester 01</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Filosofi pendidikan dan Pendidikan Nilai</div>
-        <a class="media-detail-btn" href="refleksi-sem01.html#mk1">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="sem1">
-      <div class="media-thumb"><div class="media-thumb-icon">📘</div><span class="media-type-badge badge-pdf">REFLEKSI</span><span class="media-siklus-badge">Semester 01</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Pemahaman tentang Peserta Didik dan Pembelajaran</div>
-        <a class="media-detail-btn" href="refleksi-sem01.html#mk2">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="sem1">
-      <div class="media-thumb"><div class="media-thumb-icon">📘</div><span class="media-type-badge badge-pdf">REFLEKSI</span><span class="media-siklus-badge">Semester 01</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Pembelajaran Mendalam dan Asesmen Dasar</div>
-        <a class="media-detail-btn" href="refleksi-sem01.html#mk3">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="sem1">
-      <div class="media-thumb"><div class="media-thumb-icon">📘</div><span class="media-type-badge badge-pdf">REFLEKSI</span><span class="media-siklus-badge">Semester 01</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Praktik Pengalaman Lapangan (PPL) Terbimbing</div>
-        <a class="media-detail-btn" href="refleksi-sem01.html#mk4">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="sem1">
-      <div class="media-thumb"><div class="media-thumb-icon">📘</div><span class="media-type-badge badge-pdf">REFLEKSI</span><span class="media-siklus-badge">Semester 01</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Pola Pikir Bertumbuh (Growth Mindset)</div>
-        <a class="media-detail-btn" href="refleksi-sem01.html#mk5">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="sem1">
-      <div class="media-thumb"><div class="media-thumb-icon">📘</div><span class="media-type-badge badge-pdf">REFLEKSI</span><span class="media-siklus-badge">Semester 01</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Pembelajaran Kreatif Inovatif</div>
-        <a class="media-detail-btn" href="refleksi-sem01.html#mk6">lihat refleksi →</a>
-      </div>
-    </div>
-
-    <!-- ===== SEMESTER 02  ===== -->
-    <div class="media-card" data-cat="semini">
-      <div class="media-thumb"><div class="media-thumb-icon">📗</div><span class="media-type-badge badge-ppt">REFLEKSI</span><span class="media-siklus-badge s2">Semester 02</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Nama Mata Kuliah 1</div>
-        <a class="media-detail-btn" href="refleksi.html#mk1">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="semini">
-      <div class="media-thumb"><div class="media-thumb-icon">📗</div><span class="media-type-badge badge-ppt">REFLEKSI</span><span class="media-siklus-badge s2">Semester 02</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Nama Mata Kuliah 2</div>
-        <a class="media-detail-btn" href="refleksi.html#mk2">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="semini">
-      <div class="media-thumb"><div class="media-thumb-icon">📗</div><span class="media-type-badge badge-ppt">REFLEKSI</span><span class="media-siklus-badge s2">Semester 02</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Nama Mata Kuliah 3</div>
-        <a class="media-detail-btn" href="refleksi.html#mk3">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="semini">
-      <div class="media-thumb"><div class="media-thumb-icon">📗</div><span class="media-type-badge badge-ppt">REFLEKSI</span><span class="media-siklus-badge s2">Semester 02</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Nama Mata Kuliah 4</div>
-        <a class="media-detail-btn" href="refleksi.html#mk4">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="semini">
-      <div class="media-thumb"><div class="media-thumb-icon">📗</div><span class="media-type-badge badge-ppt">REFLEKSI</span><span class="media-siklus-badge s2">Semester 02</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Nama Mata Kuliah 5</div>
-        <a class="media-detail-btn" href="refleksi.html#mk5">lihat refleksi →</a>
-      </div>
-    </div>
-    <div class="media-card" data-cat="semini">
-      <div class="media-thumb"><div class="media-thumb-icon">📗</div><span class="media-type-badge badge-ppt">REFLEKSI</span><span class="media-siklus-badge s2">Semester 02</span></div>
-      <div class="media-info">
-        <div class="media-cat">mata kuliah</div>
-        <div class="media-title">Nama Mata Kuliah 6</div>
-        <a class="media-detail-btn" href="refleksi.html#mk6">lihat refleksi →</a>
-      </div>
-    </div>
-
-    <!-- ===== REFLEKSI PPG (keseluruhan, 1 card ringkas) ===== -->
-    <div class="media-card" data-cat="ppg">
-      <div class="media-thumb"><div class="media-thumb-icon">🎓</div><span class="media-type-badge badge-link">REFLEKSI</span><span class="media-siklus-badge s2">PPG</span></div>
-      <div class="media-info">
-        <div class="media-cat">refleksi keseluruhan</div>
-        <div class="media-title">Refleksi Pengalaman Belajar Selama PPG</div>
-        <a class="media-detail-btn" href="refleksi-ppg.html">lihat refleksi →</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-<!-- MODEL GURU -->
-<section id="model-guru" class="reveal">
-  <div style="max-width:1080px;margin:0 auto;">
-    <div class="prompt"><span class="prompt-path">~/model-guru</span> — guru yang ingin saya jadi</div>
-    <div class="sec-label">03 // model guru yang dituju</div>
-    <h2>Misi &amp; Model Guru Profesional</h2>
-    <p class="lead">Rancangan misi, kompetensi, dan karakter yang ingin dibangun menuju guru informatika profesional.</p>
-    <div class="misi-block">
-      <div class="misi-label">// pernyataan misi</div>
-      <div class="misi-text">"Misi saya adalah menjadi guru informatika yang memberdayakan peserta didik untuk berpikir komputasional, memanfaatkan teknologi secara etis, dan siap menghadapi dunia yang berbasis AI."</div>
-    </div>
-    <div class="model-grid">
-      <div class="model-card">
-        <div class="model-icon">🧠</div>
-        <div class="model-title">Kompetensi yang Ingin Dibangun</div>
-        <ul class="model-list">
-          <li>Merancang pembelajaran berbasis project dan problem-solving</li>
-          <li>Mengintegrasikan AI/ML sebagai alat bantu pembelajaran</li>
-          <li>Melakukan asesmen autentik dan berdiferensiasi</li>
-          <li>Menguasai computational thinking secara mendalam</li>
-        </ul>
-      </div>
-      <div class="model-card">
-        <div class="model-icon">🌱</div>
-        <div class="model-title">Karakter Guru yang Ingin Diwujudkan</div>
-        <ul class="model-list">
-          <li>Reflektif — terus mengevaluasi dan memperbaiki praktik mengajar</li>
-          <li>Adaptif — responsif terhadap kebutuhan peserta didik</li>
-          <li>Inspiratif — memotivasi siswa berani bermimpi besar</li>
-          <li>Kolaboratif — terbuka belajar bersama rekan dan siswa</li>
-        </ul>
-      </div>
-      <div class="model-card">
-        <div class="model-icon">🎯</div>
-        <div class="model-title">Indikator Keberhasilan</div>
-        <ul class="model-list">
-          <li>Peserta didik aktif dan antusias dalam belajar</li>
-          <li>Capaian pembelajaran meningkat tiap siklus</li>
-          <li>Umpan balik positif dari GP, DPL, dan siswa</li>
-          <li>Portofolio pembelajaran berkembang konsisten</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- KONTAK -->
-<section id="kontak" class="reveal" style="background: var(--bg2); max-width:100%; padding: 6rem 2rem;">
-  <div style="max-width: 1080px; margin: 0 auto;">
-    <div class="prompt"><span class="prompt-path">~/kontak</span> — let's connect</div>
-    <div class="sec-label">04 // kontak</div>
-    <h2>Hubungi Saya</h2>
-    <p class="lead">Tertarik untuk berdiskusi, kolaborasi, atau sekadar bertukar ide? Silakan hubungi saya melalui kontak berikut.</p>
-    <!-- 🔹 Tombol Sosial -->
-     <div class="contact-wrapper">
-
-      <!-- KIRI: tombol kontak -->
-      <div class="contact-left">
-        <div class="contact-buttons">
-          <a href="https://www.linkedin.com/in/rahma-hayuning-astuti-a1023b1aa/" target="_blank" class="btn-contact">LinkedIn</a>
-          <a href="https://github.com/rahmaha" target="_blank" class="btn-contact">GitHub</a>
-          <a href="mailto:rahmahayuningastuti@gmail.com" class="btn-contact">Email</a>
-        </div>
-      </div>
-
-      <!-- KANAN: grid 4 foto -->
-      <div class="contact-right">
-        <div class="contact-photo-grid">
-
-          <!-- foto 1: Tentang Saya -->
-          <a class="contact-photo" target="_blank">
-            <img src="assets/fotoku-2.jpeg"
-              alt="Tentang Saya"
-              onerror="this.parentElement.innerHTML='<div class=\'contact-photo-placeholder\'><span>👥</span>Tentang Saya</div>'">
-            <div class="contact-photo-label">Tentang Saya</div>
-          </a>
-
-          <!-- foto 2: tim PPL -->
-          <a class="contact-photo" target="_blank">
-            <img src="assets/tim ppl.jpeg"
-              alt="Tim PPL Pak Rusli"
-              onerror="this.parentElement.innerHTML='<div class=\'contact-photo-placeholder\'><span>🤝</span>Tim PPL</div>'">
-            <div class="contact-photo-label">Tim PPL Pak Rusli</div>
-          </a>
-
-          <!-- foto 3: tim PPL Informatika -->
-          <a class="contact-photo" target="_blank">
-            <img src="assets/tim ppl informatika.jpeg"
-              alt="Tim PPL Informatika"
-              onerror="this.parentElement.innerHTML='<div class=\'contact-photo-placeholder\'><span>🐱</span>github</div>'">
-            <div class="contact-photo-label">Tim PPL Informatika</div>
-          </a>
-
-          <!-- foto 4: tim PPL UNY -->
-          <a class="contact-photo" target="_blank">
-            <img src="assets/penutup-1.jpeg"
-              alt="tim PPL UNY"
-              onerror="this.parentElement.innerHTML='<div class=\'contact-photo-placeholder\'><span>💻</span>publikasi</div>'">
-            <div class="contact-photo-label">TIM PPL UNY</div>
-          </a>
+            <div class="mt-6 pt-4 border-t-2 border-gray-200 flex justify-end">
+                <button onclick="closeModal()" class="px-5 py-2 bg-calendar-blue text-white font-title font-bold text-xs rounded border border-black">
+                    Tutup
+                </button>
+            </div>
 
         </div>
-      </div>
     </div>
-  </div>
-</section>
 
-<footer>
-  <div><div class="footer-logo">e-portfolio · ppg prajabatan 2026</div><div style="margin-top:4px;">Rahma Hayuning Astuti · Informatika · UNY</div></div>
-  <div class="footer-r"><span>built with ♥ &amp; caffeine</span><span style="color:var(--border2);">|</span><span>github pages</span></div>
-</footer>
-
-</div>
-<script src="shared.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

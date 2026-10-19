@@ -1,0 +1,135 @@
+    /* Study Desk & Calendar Page Texture Background */
+    body {
+        background-color: #e5dfd3;
+        background-image: 
+            radial-gradient(#b8b0a0 1px, transparent 1px),
+            linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+        background-size: 20px 20px, 40px 40px, 40px 40px;
+        font-family: 'Nunito', sans-serif;
+        color: #1f2937;
+    }
+
+    /* Calendar Pad Paper Container */
+    .calendar-sheet {
+        background-color: #fdfbf7;
+        background-image: 
+            linear-gradient(to right, #e2e8f0 1.5px, transparent 1.5px),
+            linear-gradient(to bottom, #e2e8f0 1.5px, transparent 1.5px);
+        background-size: 80px 80px;
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -6px rgba(0,0,0,0.1);
+        border: 3px solid #1e293b;
+    }
+
+    /* Paper Sticker & Cutout Effect */
+    .paper-cutout-title {
+        background: #ffffff;
+        color: #1e293b;
+        padding: 4px 14px;
+        font-family: 'Fredoka', cursive;
+        border: 2px solid #1e293b;
+        box-shadow: 3px 3px 0px #1e293b;
+        transform: rotate(-2deg);
+        display: inline-block;
+    }
+
+    .sticker-yellow-star {
+        filter: drop-shadow(2px 3px 0px rgba(0,0,0,0.8));
+    }
+
+    /* Washi Tape Effect */
+    .washi-tape {
+        position: absolute;
+        height: 24px;
+        width: 100px;
+        background-color: rgba(250, 204, 21, 0.85);
+        border: 1px dashed rgba(180, 83, 9, 0.4);
+        transform: rotate(-4deg);
+        z-index: 20;
+        top: -12px;
+        left: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .washi-tape-blue {
+        background-color: rgba(147, 197, 253, 0.85);
+        border-color: rgba(29, 78, 216, 0.4);
+        transform: rotate(3deg);
+        left: auto;
+        right: 20px;
+    }
+
+    .washi-tape-pink {
+        background-color: rgba(249, 168, 212, 0.85);
+        border-color: rgba(190, 24, 93, 0.4);
+        transform: rotate(-2deg);
+    }
+
+    /* Scrapbook Card Shadow & Border */
+    .scrap-card {
+        background: #ffffff;
+        border: 2.5px solid #1e293b;
+        box-shadow: 5px 6px 0px #1e293b;
+        transition: all 0.2s ease;
+    }
+    .scrap-card:hover {
+        transform: translateY(-3px) rotate(0.5deg);
+        box-shadow: 7px 9px 0px #1e293b;
+    }
+
+    /* Sticky Notes */
+    .sticky-note {
+        background: #fef08a;
+        border: 2px solid #ca8a04;
+        box-shadow: 4px 5px 0px rgba(0,0,0,0.15);
+        transform: rotate(-1deg);
+    }
+
+    /* Bookmark Navigation Tabs */
+    .nav-tab-btn {
+        font-family: 'Fredoka', cursive;
+        border: 2px solid #1e293b;
+        border-bottom: none;
+        border-radius: 12px 12px 0 0;
+        transition: all 0.2s;
+        position: relative;
+        top: 2px;
+    }
+    .nav-tab-btn.active {
+        background-color: #fdfbf7;
+        color: #1a3a7c;
+        border-top-width: 4px;
+        padding-top: 10px;
+        z-index: 10;
+        box-shadow: 0 -4px 6px -1px rgba(0,0,0,0.1);
+    }
+    .nav-tab-btn:not(.active) {
+        background-color: #e2e8f0;
+        color: #475569;
+        top: 6px;
+    }
+    .nav-tab-btn:not(.active):hover {
+        background-color: #f1f5f9;
+        top: 3px;
+    }
+
+    /* Halftone Dot Effect */
+    .halftone-dots {
+        background-image: radial-gradient(#1a3a7c 1.5px, transparent 1.5px);
+        background-size: 8px 8px;
+        opacity: 0.25;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #ede8df;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #1a3a7c;
+        border-radius: 4px;
+    }
+
+    
