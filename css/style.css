@@ -1,7 +1,7 @@
     /* Study Desk & Calendar Page Texture Background */
     body {
         background-color: #e5dfd3;
-        background-image: 
+        background-image:
             radial-gradient(#b8b0a0 1px, transparent 1px),
             linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
@@ -13,14 +13,26 @@
     /* Calendar Pad Paper Container */
     .calendar-sheet {
         background-color: #fdfbf7;
-        background-image: 
+        background-image:
             linear-gradient(to right, #e2e8f0 1.5px, transparent 1.5px),
             linear-gradient(to bottom, #e2e8f0 1.5px, transparent 1.5px);
         background-size: 80px 80px;
         box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -6px rgba(0,0,0,0.1);
         border: 3px solid #1e293b;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important; /* Paksa konten selalu rapat ke paling atas */
+        align-items: stretch !important;
     }
-
+    .page-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    width: 100%;
+    }
+    /* Jarak aman 12px agar hiasan washi-tape (top: -12px) di atas kartu tidak terpotong */
+    .scrap-card:first-child {
+        margin-top: 0.75rem !important;
+    }
     /* Paper Sticker & Cutout Effect */
     .paper-cutout-title {
         background: #ffffff;
@@ -132,4 +144,4 @@
         border-radius: 4px;
     }
 
-    
+

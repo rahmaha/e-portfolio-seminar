@@ -43,6 +43,43 @@ function renderArtefacts() {
     });
 }
 
+// Link PDF jawaban refleksi PPG
+const PPG_PDF_LINK = 'https://drive.google.com/file/d/1qVO0t7AxmNxhvfvwLyd-99vhkjSxQ9vr/view?usp=sharing';
+
+function initPpgPdf() {
+    const frame = document.getElementById('ppg-pdf-frame');
+    const openBtn = document.getElementById('ppg-drive-open');
+    const fullBtn = document.getElementById('ppg-pdf-fullscreen');
+    const empty = document.getElementById('ppg-pdf-empty');
+    if (!frame || !openBtn || !fullBtn) return;
+
+    const match = PPG_PDF_LINK.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    const id = match ? match[1] : null;
+
+    if (!id) {
+        frame.classList.add('hidden');
+        if (empty) empty.classList.remove('hidden');
+        openBtn.classList.add('hidden');
+        fullBtn.classList.add('hidden');
+        return;
+    }
+
+    frame.src = `https://drive.google.com/file/d/${id}/preview`;
+    openBtn.href = `https://drive.google.com/file/d/${id}/view`;
+
+    fullBtn.addEventListener('click', () => {
+        const goFull = frame.requestFullscreen || frame.webkitRequestFullscreen;
+        if (goFull) {
+            goFull.call(frame).catch(() => window.open(openBtn.href, '_blank'));
+        } else {
+           
+            window.open(openBtn.href, '_blank');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initPpgPdf);
+
 window.addEventListener('DOMContentLoaded', () => {
     renderArtefacts();
 
@@ -50,3 +87,4 @@ window.addEventListener('DOMContentLoaded', () => {
     const tab = location.hash.replace('#', '');
     if (tab && document.getElementById(`page-${tab}`)) switchTab(tab);
 });
+

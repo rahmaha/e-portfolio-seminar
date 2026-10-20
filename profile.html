@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil — Rahma Hayuning Astuti, S.Kom. | Portofolio Seminar PPG</title>
+
+    <!-- Tailwind CSS & File CSS Eksternal -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen flex flex-col relative pb-12">
+
+    <!-- DESK ACCESSORIES (BACKGROUND DECORATION) -->
+    <div class="fixed -top-6 left-4 md:left-12 z-0 pointer-events-none opacity-90 hidden sm:block">
+        <svg class="w-36 h-36 transform -rotate-45 drop-shadow-md" viewBox="0 0 200 200" fill="none">
+            <rect x="20" y="80" width="140" height="18" rx="2" fill="#eab308" stroke="#1e293b" stroke-width="3"/>
+            <polygon points="160,80 190,89 160,98" fill="#fde047" stroke="#1e293b" stroke-width="3"/>
+            <polygon points="180,86 190,89 180,92" fill="#1e293b"/>
+            <rect x="10" y="80" width="10" height="18" rx="2" fill="#f43f5e" stroke="#1e293b" stroke-width="3"/>
+        </svg>
+    </div>
+
+    <div class="fixed top-4 right-6 md:right-16 z-0 pointer-events-none hidden md:block">
+        <div class="relative w-16 h-16 bg-rose-500 border-2 border-gray-900 rounded-xl shadow-[3px_4px_0px_#000] rotate-12 flex items-center justify-center">
+            <div class="w-6 h-6 bg-gray-900 rounded-full flex items-center justify-center">
+                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+            </div>
+            <div class="absolute -bottom-1 -right-1 text-xs font-title bg-yellow-300 border border-black px-1 font-bold">100%</div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-desk-bg/95 backdrop-blur-sm pt-4 px-3 md:px-8 border-b-2 border-gray-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-end justify-between gap-3">
+
+            <div class="flex items-center gap-3 mb-2 md:mb-0">
+                <div class="w-11 h-11 bg-calendar-blue border-2 border-gray-900 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-[2px_2px_0px_#000] rotate-[-3deg]">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h1 class="font-title text-xl md:text-2xl text-calendar-blue tracking-wide font-extrabold">PORTOFOLIO PPG SEMINAR</h1>
+                    <p class="text-xs font-bold text-gray-700">Mata Kuliah: <span class="bg-yellow-300 px-1.5 py-0.5 rounded border border-black font-title">Seminar Pendidikan</span></p>
+                </div>
+            </div>
+
+            <!-- Bookmark Navigation Tabs -->
+            <nav class="flex items-end overflow-x-auto gap-1 text-xs md:text-sm font-title pb-0 scrollbar-none">
+                <a href="index.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-house"></i> <span>Beranda</span>
+                </a>
+                <a href="refleksi-semester-1.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-book-open"></i> <span>Refleksi Sem 1</span>
+                </a>
+                <a href="refleksi-semester-2.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-book-open"></i> <span>Refleksi Sem 2</span>
+                </a>
+                <a href="refleksi-ppg.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-award"></i> <span>Refleksi PPG</span>
+                </a>
+                <a href="kreasi-inovatif.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-book-open"></i> <span>Kreasi Inovatif</span>
+                </a>
+                <a href="profil.html" class="nav-tab-btn active px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-id-card"></i> <span>Profil</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-7xl mx-auto px-3 md:px-8 mt-4 flex-grow w-full relative z-10">
+        <div class="calendar-sheet rounded-2xl p-4 md:p-8 relative overflow-hidden space-y-8">
+
+            <!-- HERO BANNER PROFIL BERSTYLE KALENDER BIRU -->
+            <div class="relative bg-calendar-blue rounded-xl p-6 md:p-10 border-4 border-gray-900 shadow-[8px_10px_0px_#1e293b] text-white overflow-hidden">
+
+                <!-- Grid Background -->
+                <div class="absolute inset-0 grid grid-cols-3 md:grid-cols-4 gap-2 opacity-15 pointer-events-none p-4">
+                    <div class="border border-white/40 p-2 font-title text-4xl text-white">7</div>
+                    <div class="border border-white/40 p-2 font-title text-4xl text-white">8</div>
+                    <div class="border border-white/40 p-2 font-title text-4xl text-white">15</div>
+                    <div class="border border-white/40 p-2 font-title text-4xl text-white">16</div>
+                </div>
+
+                <div class="absolute right-4 bottom-4 w-40 h-40 halftone-dots pointer-events-none"></div>
+
+                <!-- Paperclip Ornament -->
+                <div class="absolute top-3 right-6 md:right-10 z-20">
+                    <svg class="w-10 h-14 text-slate-300 drop-shadow-md" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path>
+                    </svg>
+                </div>
+
+                <!-- Yellow Star Sticker -->
+                <div class="absolute top-4 left-6 md:left-8 z-20 rotate-[-12deg] sticker-yellow-star">
+                    <div class="w-10 h-10 bg-yellow-400 border-2 border-black flex items-center justify-center font-bold text-gray-900 shadow-[2px_2px_0px_#000]" style="clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);">
+                    </div>
+                </div>
+
+                <!-- Banner Content -->
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-6 pt-2">
+
+                    <!-- Polaroid Photo Frame -->
+                    <div class="bg-white border-2 border-gray-900 rounded-lg p-2.5 shadow-[4px_4px_0px_#000] rotate-[-2deg] shrink-0 w-full max-w-[240px]">
+                        <div class="bg-gray-200 overflow-hidden rounded relative border border-gray-400 flex justify-center aspect-[3/4]">
+                            <img src="assets/profile-pict.png"
+                                 alt="Foto Rahma Hayuning Astuti, S.Kom."
+                                 class="w-full h-full object-cover block"
+                                 onerror="this.src='https://placehold.co/500x600/1a3a7c/ffffff?text=Rahma+Hayuning+Astuti,+S.Kom.'">
+                            <div class="absolute bottom-2 left-2 bg-yellow-300 border border-black px-2 py-0.5 text-[11px] font-hand font-bold text-gray-900 shadow-sm">
+                                Belajar AI, Berbagi Ilmu 💻✦
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="space-y-3 text-center md:text-left">
+                        <div class="inline-block bg-white text-gray-900 px-3 py-1 font-title font-bold text-xs md:text-sm border-2 border-gray-900 shadow-[3px_3px_0px_#000] rotate-[-1deg]">
+                            MAHASISWA PPG PRAJABATAN UNY
+                        </div>
+
+                        <h2 class="font-title text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wide text-yellow-300 drop-shadow-[3px_3px_0px_#000] leading-tight">
+                            Rahma Hayuning Astuti, S.Kom.
+                        </h2>
+
+                        <p class="text-xs md:text-sm text-blue-100 font-bold font-mono">
+                            NIM: 25105260251 | LPTK Universitas Negeri Yogyakarta
+                        </p>
+
+                        <p class="text-xs md:text-sm text-blue-100 font-body leading-relaxed max-w-2xl bg-calendar-blue-dark/70 p-3.5 rounded-lg border border-blue-400/30">
+                            Calon Pendidik Informatika profesional yang berdedikasi menciptakan suasana belajar ramah anak, berpusat pada murid, dan berbasis pemikiran komputasional Abad 21.
+                        </p>
+
+                        <div class="pt-1 flex flex-wrap justify-center md:justify-start gap-2 text-xs font-title">
+                            <span class="bg-yellow-300 text-gray-900 px-3 py-1 rounded border-2 border-black font-bold shadow-[2px_2px_0px_#000] flex items-center gap-1">
+                                <i class="fa-solid fa-code"></i> PENDIDIKAN INFORMATIKA
+                            </span>
+                            <span class="bg-white text-gray-900 px-3 py-1 rounded border-2 border-black font-bold shadow-[2px_2px_0px_#000] flex items-center gap-1">
+                                <i class="fa-solid fa-graduation-cap"></i> UNY 2026
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Doodles -->
+                <div class="absolute bottom-3 right-8 z-20 flex items-center gap-3">
+                    <div class="w-8 h-8 bg-rose-500 border-2 border-black rounded-full flex items-center justify-center text-white text-sm shadow-[2px_2px_0px_#000] rotate-12">
+                        ❤️
+                    </div>
+                    <div class="text-rose-400 text-3xl hidden sm:block">
+                        ✿
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPETENCIES & CONTACT CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Left Column: Competencies & Info -->
+                <div class="scrap-card p-6 rounded-xl bg-white relative">
+                    <div class="washi-tape"></div>
+                    <h3 class="font-title text-lg font-bold text-gray-900 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-award text-yellow-500"></i> Kompetensi Guru Profesional
+                    </h3>
+                    <ul class="space-y-2 text-xs text-gray-700">
+                        <li class="p-2.5 bg-yellow-50 rounded border border-yellow-300 flex items-center justify-between">
+                            <span>Penyusunan Modul Ajar Berdiferensiasi Informatika</span>
+                            <span class="font-title text-emerald-700 font-bold">Sangat Baik</span>
+                        </li>
+                        <li class="p-2.5 bg-blue-50 rounded border border-blue-300 flex items-center justify-between">
+                            <span>Penguasaan Media Digital (Scratch, Python, Canva, AI)</span>
+                            <span class="font-title text-emerald-700 font-bold">Mahir</span>
+                        </li>
+                        <li class="p-2.5 bg-purple-50 rounded border border-purple-300 flex items-center justify-between">
+                            <span>Manajemen Kelas & Praktikum Lab Komputer</span>
+                            <span class="font-title text-emerald-700 font-bold">Teruji PPL</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Column: Contact -->
+                <div class="scrap-card p-6 rounded-xl bg-white relative">
+                    <div class="washi-tape washi-tape-blue"></div>
+                    <h3 class="font-title text-lg font-bold text-gray-900 flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-address-book text-calendar-blue"></i> Kontak & Jejaring Akademik
+                    </h3>
+                    <div class="space-y-3 text-xs">
+                        <a href="mailto:rahmahayuning2025@student.uny.ac.id" class="p-3 bg-gray-50 hover:bg-yellow-100 rounded border border-gray-300 flex items-center gap-3 transition block">
+                            <i class="fa-solid fa-envelope text-red-500 text-lg"></i>
+                            <div>
+                                <div class="font-bold">Email Akademik UNY</div>
+                                <div class="text-gray-500">rahmahayuning2025@student.uny.ac.id</div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/rahmaha" target="_blank" rel="noopener" class="p-3 bg-gray-50 hover:bg-yellow-100 rounded border border-gray-300 flex items-center gap-3 transition block">
+                            <i class="fa-brands fa-github text-gray-900 text-lg"></i>
+                            <div>
+                                <div class="font-bold">GitHub</div>
+                                <div class="text-gray-500">github.com/rahmaha</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Script Eksternal -->
+    <script src="js/script.js"></script>
+</body>
+</html>

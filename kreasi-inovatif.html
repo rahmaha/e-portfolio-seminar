@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreasi Inovatif - Portofolio Seminar PPG - Rahma Hayuning Astuti, S.Kom.</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col relative pb-12">
+
+    <!-- DESK ACCESSORIES (BACKGROUND DECORATION) -->
+    <!-- Top Left Stationery: Pencil -->
+    <div class="fixed -top-6 left-4 md:left-12 z-0 pointer-events-none opacity-90 hidden sm:block">
+        <svg class="w-36 h-36 transform -rotate-45 drop-shadow-md" viewBox="0 0 200 200" fill="none">
+            <rect x="20" y="80" width="140" height="18" rx="2" fill="#eab308" stroke="#1e293b" stroke-width="3"/>
+            <polygon points="160,80 190,89 160,98" fill="#fde047" stroke="#1e293b" stroke-width="3"/>
+            <polygon points="180,86 190,89 180,92" fill="#1e293b"/>
+            <rect x="10" y="80" width="10" height="18" rx="2" fill="#f43f5e" stroke="#1e293b" stroke-width="3"/>
+        </svg>
+    </div>
+
+    <!-- Top Right Stationery: Red Sharpener & Star -->
+    <div class="fixed top-4 right-6 md:right-16 z-0 pointer-events-none hidden md:block">
+        <div class="relative w-16 h-16 bg-rose-500 border-2 border-gray-900 rounded-xl shadow-[3px_4px_0px_#000] rotate-12 flex items-center justify-center">
+            <div class="w-6 h-6 bg-gray-900 rounded-full flex items-center justify-center">
+                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+            </div>
+            <div class="absolute -bottom-1 -right-1 text-xs font-title bg-yellow-300 border border-black px-1 font-bold">100%</div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION (BOOKMARK TABS) -->
+    <header class="sticky top-0 z-40 bg-desk-bg/95 backdrop-blur-sm pt-4 px-3 md:px-8 border-b-2 border-gray-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-end justify-between gap-3">
+            
+            <!-- Logo Brand Title -->
+            <div class="flex items-center gap-3 mb-2 md:mb-0">
+                <div class="w-11 h-11 bg-calendar-blue border-2 border-gray-900 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-[2px_2px_0px_#000] rotate-[-3deg]">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h1 class="font-title text-xl md:text-2xl text-calendar-blue tracking-wide font-extrabold">PORTOFOLIO PPG</h1>
+                    <p class="text-xs font-bold text-gray-700">Mata Kuliah: <span class="bg-yellow-300 px-1.5 py-0.5 rounded border border-black font-title">Seminar Pendidikan</span></p>
+                </div>
+            </div>
+
+            <!-- Bookmark Navigation Tabs -->
+            <nav class="flex items-end overflow-x-auto gap-1 text-xs md:text-sm font-title pb-0 scrollbar-none">
+                <a href="index.html" id="tab-btn-home" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-house"></i> <span>Beranda</span>
+                </a>
+                <a href="refleksi-semester-1.html" id="tab-btn-sem1" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-book-open"></i> <span>Refleksi Sem 1</span>
+                </a>
+                <a href="refleksi-semester-2.html" id="tab-btn-sem2" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-book"></i> <span>Refleksi Sem 2</span>
+                </a>
+                <a href="index.html#ppg" id="tab-btn-ppg" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-award"></i> <span>Refleksi PPG</span>
+                </a>
+                <a href="kreasi-inovatif.html" id="tab-btn-kreasi" class="nav-tab-btn active px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-lightbulb"></i> <span>Kreasi Inovatif</span>
+                </a>
+                <a href="index.html#profil" id="tab-btn-profil" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-id-card"></i> <span>Profil</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CALENDAR DESK SHEET CONTAINER -->
+    <main class="max-w-7xl mx-auto px-3 md:px-8 mt-4 flex-grow w-full relative z-10">
+        <div class="calendar-sheet rounded-2xl p-4 md:p-8 min-h-[80vh] relative overflow-hidden">
+
+            <!-- ================= KREASI INOVATIF ================= -->
+            <section id="page-kreasi" class="space-y-6">
+
+                <div class="scrap-card p-6 rounded-xl bg-calendar-blue text-white">
+                    <h2 class="font-title text-3xl font-extrabold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb text-yellow-400"></i> Kreasi Inovatif
+                    </h2>
+                    <p class="text-xs md:text-sm text-blue-100 mt-1">Karya inovasi pembelajaran Informatika hasil Rahma Hayuning Astuti, S.Kom.</p>
+                </div>
+
+                <!-- ===== KARYA: FLOWCHART MISSION ===== -->
+                <div class="scrap-card p-5 sm:p-6 rounded-xl bg-white relative space-y-6">
+                    <div class="washi-tape"></div>
+
+                    <!-- Judul + tombol -->
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                        <div>
+                            <span class="bg-yellow-300 text-gray-900 border border-black font-title text-[10px] font-bold px-2 py-0.5 rounded inline-block mb-2">LKM DIGITAL BERBASIS GAME</span>
+                            <h3 class="font-title text-2xl md:text-3xl font-extrabold text-calendar-blue">Flowchart Mission: 16-Bit RPG Edition</h3>
+                            <p class="text-xs md:text-sm text-gray-600 font-body mt-1">LKM digital interaktif untuk melatih logika flowchart secara berkelompok, dikemas sebagai petualangan 4 quest.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 shrink-0">
+                            <a href="https://rahmaha.github.io/flowchart-mission/" target="_blank" rel="noopener"
+                               class="px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5">
+                                <i class="fa-solid fa-gamepad text-yellow-300"></i> Buka Media
+                            </a>
+                            <a href="https://drive.google.com" target="_blank" rel="noopener"
+                               class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
+                                <i class="fa-solid fa-link"></i> Modul Ajar / Pendukung
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Latar belakang + tujuan -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-yellow-50 rounded-lg border-2 border-yellow-400">
+                            <h4 class="font-title text-sm font-bold text-yellow-900 mb-1">Latar Belakang</h4>
+                            <p class="text-xs text-gray-800 font-body leading-relaxed whitespace-pre-line">[Tulis 2–3 kalimat: masalah pembelajaran flowchart yang kamu temui di kelas.]</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-lg border-2 border-blue-400">
+                            <h4 class="font-title text-sm font-bold text-blue-900 mb-1">Tujuan</h4>
+                            <p class="text-xs text-gray-800 font-body leading-relaxed whitespace-pre-line">[Tulis 1–2 kalimat: apa yang diharapkan siswa mampu setelah memakai media ini.]</p>
+                        </div>
+                    </div>
+
+                    <!-- Alur 5 tahap -->
+                    <div>
+                        <h4 class="font-title text-base font-bold text-gray-900 mb-3">Alur Permainan</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs font-body">
+                            <div class="p-3 bg-pink-50 rounded-lg border-2 border-pink-400">
+                                <strong class="font-title text-pink-900 block mb-1">0. Registrasi</strong>
+                                Kelompok memilih nomor dan mendaftarkan 1–4 anggota tim.
+                            </div>
+                            <div class="p-3 bg-emerald-50 rounded-lg border-2 border-emerald-400">
+                                <strong class="font-title text-emerald-900 block mb-1">1. Arrange</strong>
+                                Mengurutkan langkah dan simbol flowchart sesuai kasus kelompok.
+                            </div>
+                            <div class="p-3 bg-orange-50 rounded-lg border-2 border-orange-400">
+                                <strong class="font-title text-orange-900 block mb-1">2. Analyze</strong>
+                                Menganalisis logika dan percabangan lewat soal verifikasi.
+                            </div>
+                            <div class="p-3 bg-purple-50 rounded-lg border-2 border-purple-400">
+                                <strong class="font-title text-purple-900 block mb-1">3. Create</strong>
+                                Menggambar flowchart di karton, lalu memotret dan mengunggahnya.
+                            </div>
+                            <div class="p-3 bg-teal-50 rounded-lg border-2 border-teal-400">
+                                <strong class="font-title text-teal-900 block mb-1">Showdown</strong>
+                                Presentasi kelompok dengan timer, plus rekap hasil untuk guru.
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-600 font-body mt-3">
+                            <strong>9 kasus berbeda</strong> untuk 9 kelompok: pemesanan makanan online, mesin ATM, lampu lalu lintas cerdas, login aplikasi sekolah, alarm kebakaran, pemilah sampah otomatis, kasir minimarket dan diskon, kipas sensor suhu, dan pintu gerbang otomatis.
+                        </p>
+                    </div>
+
+                    <!-- Coba langsung (dimuat setelah diklik supaya halaman tidak berat) -->
+                    <div>
+                        <h4 class="font-title text-base font-bold text-gray-900 mb-3">Coba Langsung</h4>
+                        <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
+                            <div class="p-10 text-center">
+                                <button type="button"
+                                        onclick="var f=document.getElementById('flow-frame'); f.src=f.dataset.src; f.classList.remove('hidden'); this.parentElement.classList.add('hidden');"
+                                        class="px-4 py-2 bg-calendar-blue text-white font-title text-sm font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900">
+                                    <i class="fa-solid fa-play"></i> Jalankan Media di Halaman Ini
+                                </button>
+                                <p class="text-[11px] text-gray-500 mt-3">Kalau tidak tampil, pakai tombol "Buka Media" di atas.</p>
+                            </div>
+                            <iframe id="flow-frame" class="hidden" data-src="https://rahmaha.github.io/flowchart-mission/" title="Flowchart Mission" allowfullscreen
+                                    style="display:block; width:100%; height:80vh; min-height:520px; border:0; background:#fff;"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot -->
+                    <div>
+                        <h4 class="font-title text-base font-bold text-gray-900 mb-3">Tampilan Media</h4>
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                            <figure>
+                                <img src="img/kreasi/stage1.jpg" alt="Tampilan Stage 1" onclick="window.open(this.src)"
+                                     onerror="this.src='https://placehold.co/600x400/e5e7eb/6b7280?text=Screenshot+Stage+1'"
+                                     class="w-full h-auto rounded border-2 border-gray-900 cursor-zoom-in">
+                                <figcaption class="text-[11px] text-gray-600 mt-1">Stage 1: Arrange</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/kreasi/stage2.jpg" alt="Tampilan Stage 2" onclick="window.open(this.src)"
+                                     onerror="this.src='https://placehold.co/600x400/e5e7eb/6b7280?text=Screenshot+Stage+2'"
+                                     class="w-full h-auto rounded border-2 border-gray-900 cursor-zoom-in">
+                                <figcaption class="text-[11px] text-gray-600 mt-1">Stage 2: Analyze</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/kreasi/stage3.jpg" alt="Tampilan Stage 3" onclick="window.open(this.src)"
+                                     onerror="this.src='https://placehold.co/600x400/e5e7eb/6b7280?text=Screenshot+Stage+3'"
+                                     class="w-full h-auto rounded border-2 border-gray-900 cursor-zoom-in">
+                                <figcaption class="text-[11px] text-gray-600 mt-1">Stage 3: Create</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/kreasi/showdown.jpg" alt="Tampilan Showdown dan rekap guru" onclick="window.open(this.src)"
+                                     onerror="this.src='https://placehold.co/600x400/e5e7eb/6b7280?text=Screenshot+Showdown'"
+                                     class="w-full h-auto rounded border-2 border-gray-900 cursor-zoom-in">
+                                <figcaption class="text-[11px] text-gray-600 mt-1">Showdown & rekap guru</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Bukti penerapan -->
+                    <div>
+                        <h4 class="font-title text-base font-bold text-gray-900 mb-1">Penerapan di Kelas</h4>
+                        <p class="text-[11px] text-gray-500 mb-3">Wajah dan nama siswa sebaiknya disamarkan.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <figure>
+                                <img src="img/kreasi/kelas-1.jpg" alt="Siswa berdiskusi" onclick="window.open(this.src)"
+                                     onerror="this.src='https://placehold.co/600x400/e5e7eb/6b7280?text=Foto+Diskusi+Kelompok'"
+                                     class="w-full h-auto rounded border-2 border-gray-900 cursor-zoom-in">
+                                <figcaption class="text-[11px] text-gray-600 mt-1">Diskusi kelompok</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/kreasi/kelas-2.jpg" alt="Hasil flowchart karton" onclick="window.open(this.src)"
+                                     onerror="this.src='https://placehold.co/600x400/e5e7eb/6b7280?text=Foto+Flowchart+Karton'"
+                                     class="w-full h-auto rounded border-2 border-gray-900 cursor-zoom-in">
+                                <figcaption class="text-[11px] text-gray-600 mt-1">Hasil flowchart karton</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/kreasi/kelas-3.jpg" alt="Presentasi kelompok" onclick="window.open(this.src)"
+                                     onerror="this.src='https://placehold.co/600x400/e5e7eb/6b7280?text=Foto+Presentasi'"
+                                     class="w-full h-auto rounded border-2 border-gray-900 cursor-zoom-in">
+                                <figcaption class="text-[11px] text-gray-600 mt-1">Presentasi kelompok</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Hasil & refleksi -->
+                    <div>
+                        <h4 class="font-title text-base font-bold text-gray-900 mb-3">Hasil dan Refleksi</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 bg-emerald-50 rounded-lg border-2 border-emerald-400">
+                                <h5 class="font-title text-sm font-bold text-emerald-900 mb-1">Yang Berhasil</h5>
+                                <p class="text-xs text-gray-800 font-body leading-relaxed whitespace-pre-line">[isi]</p>
+                            </div>
+                            <div class="p-4 bg-orange-50 rounded-lg border-2 border-orange-400">
+                                <h5 class="font-title text-sm font-bold text-orange-900 mb-1">Kendala</h5>
+                                <p class="text-xs text-gray-800 font-body leading-relaxed whitespace-pre-line">[isi, termasuk fitur yang belum berjalan mulus di kelas kalau ada]</p>
+                            </div>
+                            <div class="p-4 bg-purple-50 rounded-lg border-2 border-purple-400">
+                                <h5 class="font-title text-sm font-bold text-purple-900 mb-1">Rencana Perbaikan</h5>
+                                <p class="text-xs text-gray-800 font-body leading-relaxed whitespace-pre-line">[isi]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            
+        </div>
+    </main>
+
+</body>
+</html>

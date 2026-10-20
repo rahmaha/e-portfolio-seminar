@@ -43,7 +43,7 @@
     <!-- HEADER / NAVIGATION (BOOKMARK TABS) -->
     <header class="sticky top-0 z-40 bg-desk-bg/95 backdrop-blur-sm pt-4 px-3 md:px-8 border-b-2 border-gray-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-end justify-between gap-3">
-            
+
             <!-- Logo Brand Title -->
             <div class="flex items-center gap-3 mb-2 md:mb-0">
                 <div class="w-11 h-11 bg-calendar-blue border-2 border-gray-900 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-[2px_2px_0px_#000] rotate-[-3deg]">
@@ -63,14 +63,14 @@
                 <a href="refleksi-semester-1.html" id="tab-btn-sem1" class="nav-tab-btn active px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-book-open"></i> <span>Refleksi Sem 1</span>
                 </a>
-                <a href="index.html#sem2" id="tab-btn-sem2" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                <a href="refleksi-semester-2.html" id="tab-btn-sem2" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-book"></i> <span>Refleksi Sem 2</span>
                 </a>
                 <a href="index.html#ppg" id="tab-btn-ppg" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-award"></i> <span>Refleksi PPG</span>
                 </a>
-                <a href="index.html#artefak" id="tab-btn-artefak" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
-                    <i class="fa-solid fa-folder-open"></i> <span>Artefak</span>
+                <a href="index.html#kreasi" id="tab-btn-kreasi" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-lightbulb"></i> <span>Kreasi Inovatif</span>
                 </a>
                 <a href="index.html#profil" id="tab-btn-profil" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-id-card"></i> <span>Profil</span>
@@ -85,7 +85,7 @@
 
             <!-- ================= TAB 2: REFLEKSI SEMESTER 1 (LENGKAP DENGAN SECTION 01 & SECTION 02) ================= -->
             <section id="page-sem1" class="space-y-8">
-                
+
                 <!-- Page Banner Header -->
                 <div class="scrap-card p-6 rounded-xl bg-calendar-blue text-white relative overflow-hidden">
                     <div class="relative z-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -214,15 +214,14 @@
                     <!-- Search Input for Sem 1 -->
                     <div class="scrap-card p-3 rounded-xl bg-white flex items-center gap-3">
                         <i class="fa-solid fa-magnifying-glass text-gray-400 pl-2"></i>
-                        <input type="text" id="search-sem1-input" oninput="filterSem1Courses()" placeholder="Cari kode matkul, nama matkul, atau nama dosen pengampu..." 
+                        <input type="text" id="search-input" oninput="filterCourses()" placeholder="Cari kode matkul, nama matkul, atau nama dosen pengampu..."
                                class="w-full text-xs md:text-sm border-none focus:outline-none bg-transparent">
                     </div>
 
                     <!-- 6 MATKUL ACCORDION CARDS CONTAINER -->
                     <div class="space-y-5" id="sem1-courses-container">
-                        
                         <!-- MATKUL 01 -->
-                        <div class="sem1-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PG7228 filosofi pendidikan nilai putu sudira satriyo agung dewanto">
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PG7228 filosofi pendidikan nilai putu sudira satriyo agung dewanto">
                             <div onclick="toggleAccordion('acc-m1')" class="p-5 bg-yellow-50 hover:bg-yellow-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
                                     <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
@@ -245,44 +244,38 @@
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
-
                             <div id="acc-m1" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <div class="p-4 bg-yellow-100/60 rounded-lg border border-yellow-400">
-                                    <h5 class="font-title text-sm font-bold text-amber-900 mb-1"> Ringkasan Refleksi Matkul</h5>
-                                    <p class="text-xs text-gray-700 font-body leading-relaxed">
-                                        Mengkaji pemikiran Ki Hajar Dewantara mengenai Sistem Among, Menuntun, Kodrat Alam & Zaman, serta penanaman Nilai-Nilai Pancasila dalam Pendidikan Informatika Abad 21.
-                                    </p>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-body">
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Topik Utama:</strong>
-                                        Trilogi Pendidikan KHD, Dasar-Dasar Pendidikan Nilai, Humanisme dalam Informatika.
+                                <!-- Isi link share Google Drive PDF jawaban refleksi PG7228 di data-pdf -->
+                                <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/1ukkceC4iVkLgC-pnBDJxCPcDk2jEHJ6d/view?usp=sharing">
+                                    <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PG7228" allow="fullscreen" allowfullscreen
+                                                style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
+                                        <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Artefak Unggulan:</strong>
-                                        Infografis Visi Guru Informatika Transformatif Berbasis Sistem Among.
-                                    </div>
-                                </div>
 
-                                <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2 justify-between items-center">
-                                    <div class="flex gap-2">
-                                        <a href="https://drive.google.com" target="_blank" class="px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5">
-                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Artefak LMS GDrive
+                                    <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2">
+                                        <a class="course-pdf-open px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5"
+                                           href="#" target="_blank" rel="noopener">
+                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-                                        <button onclick="openModalWithCourse(0)" class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                            <i class="fa-solid fa-eye"></i> Detail Jawaban 7 Pertanyaan
-                                        </button>
+
+                                        <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
+                                           href="#">
+                                            <i class="fa-solid fa-file-pdf"></i> Unduh PDF
+                                        </a>
+
+                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
+                                        <a href="https://drive.google.com/drive/folders/1i0vvTINKQLmfyNXt4KglLziTgMi-B3Nw?usp=sharing" target="_blank" rel="noopener"
+                                           class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
+                                            <i class="fa-solid fa-link"></i> Link Artefak
+                                        </a>
                                     </div>
-                                    <a href="pdf/PG7228-refleksi.pdf" download class="px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                        <i class="fa-solid fa-file-pdf"></i> PDF Refleksi
-                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- MATKUL 02 -->
-                        <div class="sem1-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7302 pemahaman tentang peserta didik pembelajaran masduki zakariah bekti wulandari">
+                        <!-- MATKUL 02 PPDP -->
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7302 pemahaman tentang peserta didik pembelajaran masduki zakariah bekti wulandari">
                             <div onclick="toggleAccordion('acc-m2')" class="p-5 bg-blue-50 hover:bg-blue-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
                                     <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
@@ -305,44 +298,38 @@
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
-
                             <div id="acc-m2" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <div class="p-4 bg-blue-100/60 rounded-lg border border-blue-400">
-                                    <h5 class="font-title text-sm font-bold text-blue-900 mb-1"> Ringkasan Refleksi Matkul</h5>
-                                    <p class="text-xs text-gray-700 font-body leading-relaxed">
-                                        Memahami profiling peserta didik, teori perkembangan kognitif, motivasi belajar, serta perancangan asesmen diagnostik awal pada pembelajaran berpikir komputasional.
-                                    </p>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-body">
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Topik Utama:</strong>
-                                        Profiling Siswa, Teori Piaget & Vygotsky, Culturally Sustaining Pedagogy.
+                                <!-- Isi link share Google Drive PDF jawaban refleksi PPG7302 di data-pdf -->
+                                <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/194LyjFyhoiouozHWtWZirEPlHgH-OufL/view?usp=sharing">
+                                    <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPG7302" allow="fullscreen" allowfullscreen
+                                                style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
+                                        <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Artefak Unggulan:</strong>
-                                        Instrumen Pemetaan Diagnostik Gaya Belajar & Profil Kognitif Siswa SMK/SMP.
-                                    </div>
-                                </div>
 
-                                <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2 justify-between items-center">
-                                    <div class="flex gap-2">
-                                        <a href="https://drive.google.com" target="_blank" class="px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5">
-                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Artefak LMS GDrive
+                                    <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2">
+                                        <a class="course-pdf-open px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5"
+                                           href="#" target="_blank" rel="noopener">
+                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-                                        <button onclick="openModalWithCourse(1)" class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                            <i class="fa-solid fa-eye"></i> Detail Jawaban 7 Pertanyaan
-                                        </button>
+
+                                        <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
+                                           href="#">
+                                            <i class="fa-solid fa-file-pdf"></i> Unduh PDF
+                                        </a>
+
+                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
+                                        <a href="https://drive.google.com/file/d/1b1nI00BbFR4Nbs3m3Z55YFr8MRQ131gz/view?usp=sharing" target="_blank" rel="noopener"
+                                           class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
+                                            <i class="fa-solid fa-link"></i> Link Artefak
+                                        </a>
                                     </div>
-                                    <a href="pdf/PPG7302-refleksi.pdf" download class="px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                        <i class="fa-solid fa-file-pdf"></i> PDF Refleksi
-                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- MATKUL 03 -->
-                        <div class="sem1-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7729 pembelajaran mendalam asesmen dasar umi rochayati">
+                        <!-- MATKUL 03 PMA-->
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7729 pembelajaran mendalam asesmen dasar umi rochayati">
                             <div onclick="toggleAccordion('acc-m3')" class="p-5 bg-emerald-50 hover:bg-emerald-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
                                     <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
@@ -365,44 +352,38 @@
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
-
                             <div id="acc-m3" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <div class="p-4 bg-emerald-100/60 rounded-lg border border-emerald-400">
-                                    <h5 class="font-title text-sm font-bold text-emerald-900 mb-1"> Ringkasan Refleksi Matkul</h5>
-                                    <p class="text-xs text-gray-700 font-body leading-relaxed">
-                                        Mendesain alur pembelajaran dengan pendekatan Understanding by Design (UbD) & Deep Learning. Menyelaraskan tujuan pembelajaran, kegiatan koding, dan instrumen asesmen otentik.
-                                    </p>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-body">
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Topik Utama:</strong>
-                                        Backward Design (UbD), Asesmen Formatif & Sumatif, Rubrik Koding.
+                                <!-- Isi link share Google Drive PDF jawaban refleksi PPG7729 di data-pdf -->
+                                <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/1zYRN57fM_3Rtmil7EMjQmflUvPe49RX-/view?usp=sharing">
+                                    <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPG7729" allow="fullscreen" allowfullscreen
+                                                style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
+                                        <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Artefak Unggulan:</strong>
-                                        Modul Ajar Informatika UbD & Rubrik Penilaian Proyek Pemrograman Python.
-                                    </div>
-                                </div>
 
-                                <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2 justify-between items-center">
-                                    <div class="flex gap-2">
-                                        <a href="https://drive.google.com" target="_blank" class="px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5">
-                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Artefak LMS GDrive
+                                    <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2">
+                                        <a class="course-pdf-open px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5"
+                                           href="#" target="_blank" rel="noopener">
+                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-                                        <button onclick="openModalWithCourse(2)" class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                            <i class="fa-solid fa-eye"></i> Detail Jawaban 7 Pertanyaan
-                                        </button>
+
+                                        <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
+                                           href="#">
+                                            <i class="fa-solid fa-file-pdf"></i> Unduh PDF
+                                        </a>
+
+                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
+                                        <a href="https://drive.google.com/file/d/1dkAHKU5AE_lGuOVCJkQkEcgBMFw6e6K0/view?usp=sharing" target="_blank" rel="noopener"
+                                           class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
+                                            <i class="fa-solid fa-link"></i> Link Artefak
+                                        </a>
                                     </div>
-                                    <a href="pdf/PPG7729-refleksi.pdf" download class="px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                        <i class="fa-solid fa-file-pdf"></i> PDF Refleksi
-                                    </a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- MATKUL 04 -->
-                        <div class="sem1-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7607 praktik pengalaman lapangan ppl terbimbing masduki zakariah">
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7607 praktik pengalaman lapangan ppl terbimbing masduki zakariah">
                             <div onclick="toggleAccordion('acc-m4')" class="p-5 bg-purple-50 hover:bg-purple-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
                                     <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
@@ -425,44 +406,38 @@
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
-
                             <div id="acc-m4" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <div class="p-4 bg-purple-100/60 rounded-lg border border-purple-400">
-                                    <h5 class="font-title text-sm font-bold text-purple-900 mb-1"> Ringkasan Refleksi Matkul</h5>
-                                    <p class="text-xs text-gray-700 font-body leading-relaxed">
-                                        Praktik mengajar nyata secara terbimbing di sekolah mitra. Mengaplikasikan modul ajar, pengelolaan laboratorium komputer, dan pendampingan siswa dalam praktikum Informatika.
-                                    </p>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-body">
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Topik Utama:</strong>
-                                        Orientasi Sekolah, Observasi Pembelajaran, Teaching Practice Terbimbing, Peer Review.
+                                <!-- Isi link share Google Drive PDF jawaban refleksi PPG7607 di data-pdf -->
+                                <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/14X1IA8k00WqbOIJoMZ-jI6dB6JGW3WG5/view?usp=sharing">
+                                    <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPG7607" allow="fullscreen" allowfullscreen
+                                                style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
+                                        <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Artefak Unggulan:</strong>
-                                        Video Rekaman Pembelajaran PPL Terbimbing & Jurnal Harian Praktik Mengajar.
-                                    </div>
-                                </div>
 
-                                <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2 justify-between items-center">
-                                    <div class="flex gap-2">
-                                        <a href="https://drive.google.com" target="_blank" class="px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5">
-                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Artefak LMS GDrive
+                                    <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2">
+                                        <a class="course-pdf-open px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5"
+                                           href="#" target="_blank" rel="noopener">
+                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-                                        <button onclick="openModalWithCourse(3)" class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                            <i class="fa-solid fa-eye"></i> Detail Jawaban 7 Pertanyaan
-                                        </button>
+
+                                        <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
+                                           href="#">
+                                            <i class="fa-solid fa-file-pdf"></i> Unduh PDF
+                                        </a>
+
+                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
+                                        <a href="https://docs.google.com/document/d/1MBCA21rp8QpxDidNV1sEmBuTfBbYZWX8/edit?usp=sharing&ouid=105223762454760863482&rtpof=true&sd=true" target="_blank" rel="noopener"
+                                           class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
+                                            <i class="fa-solid fa-link"></i> Link Artefak
+                                        </a>
                                     </div>
-                                    <a href="pdf/PPG7607-refleksi.pdf" download class="px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                        <i class="fa-solid fa-file-pdf"></i> PDF Refleksi
-                                    </a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- MATKUL 05 -->
-                        <div class="sem1-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7230 pola pikir bertumbuh growth mindset adi dewanto">
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7230 pola pikir bertumbuh growth mindset adi dewanto">
                             <div onclick="toggleAccordion('acc-m5')" class="p-5 bg-orange-50 hover:bg-orange-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
                                     <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
@@ -485,44 +460,38 @@
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
-
                             <div id="acc-m5" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <div class="p-4 bg-orange-100/60 rounded-lg border border-orange-400">
-                                    <h5 class="font-title text-sm font-bold text-orange-900 mb-1"> Ringkasan Refleksi Matkul</h5>
-                                    <p class="text-xs text-gray-700 font-body leading-relaxed">
-                                        Membangun kesadaran bahwa kemampuan memecahkan masalah koding bukan bakat bawaan, melainkan keterampilan yang terus bertumbuh melalui latihan, kegagalan error, dan kegigihan (resiliensi).
-                                    </p>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-body">
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Topik Utama:</strong>
-                                        Growth Mindset vs Fixed Mindset, Reframing Error Koding, Resiliensi Belajar.
+                                <!-- Isi link share Google Drive PDF jawaban refleksi PPG7230 di data-pdf -->
+                                <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/1IMyPBDBWrWSIHqRC-9vKcxp1aEjKMZ5w/view?usp=sharing">
+                                    <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPG7230" allow="fullscreen" allowfullscreen
+                                                style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
+                                        <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Artefak Unggulan:</strong>
-                                        Poster Motivasi "Debugging equals Learning" & LKPD Refleksi Error Siswa.
-                                    </div>
-                                </div>
 
-                                <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2 justify-between items-center">
-                                    <div class="flex gap-2">
-                                        <a href="https://drive.google.com" target="_blank" class="px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5">
-                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Artefak LMS GDrive
+                                    <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2">
+                                        <a class="course-pdf-open px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5"
+                                           href="#" target="_blank" rel="noopener">
+                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-                                        <button onclick="openModalWithCourse(4)" class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                            <i class="fa-solid fa-eye"></i> Detail Jawaban 7 Pertanyaan
-                                        </button>
+
+                                        <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
+                                           href="#">
+                                            <i class="fa-solid fa-file-pdf"></i> Unduh PDF
+                                        </a>
+
+                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
+                                        <a href="https://drive.google.com/file/d/1ISGlGDTmkw3AUGPBfTTMsjlt5hCqW5ar/view?usp=sharing" target="_blank" rel="noopener"
+                                           class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
+                                            <i class="fa-solid fa-link"></i> Link Artefak
+                                        </a>
                                     </div>
-                                    <a href="pdf/PPG7230-refleksi.pdf" download class="px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                        <i class="fa-solid fa-file-pdf"></i> PDF Refleksi
-                                    </a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- MATKUL 06 -->
-                        <div class="sem1-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7226 pembelajaran kreatif inovatif priyanto">
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7226 pembelajaran kreatif inovatif priyanto">
                             <div onclick="toggleAccordion('acc-m6')" class="p-5 bg-teal-50 hover:bg-teal-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
                                     <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
@@ -545,38 +514,32 @@
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
-
                             <div id="acc-m6" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <div class="p-4 bg-teal-100/60 rounded-lg border border-teal-400">
-                                    <h5 class="font-title text-sm font-bold text-teal-900 mb-1"> Ringkasan Refleksi Matkul</h5>
-                                    <p class="text-xs text-gray-700 font-body leading-relaxed">
-                                        Eksplorasi metode pembelajaran inovatif berbasis Design Thinking, gamifikasiScratch, media interaktif Canva, serta penggunaan AI edukatif dalam kelas Informatika.
-                                    </p>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-body">
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Topik Utama:</strong>
-                                        Design Thinking in Education, Interactive Learning Tools, Gamifikasi Pembelajaran.
+                                <!-- Isi link share Google Drive PDF jawaban refleksi PPG7226 di data-pdf -->
+                                <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/1UdZbVo8aun8a4q27L-ZGBxJry3wC69nG/view?usp=sharing">
+                                    <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPG7226" allow="fullscreen" allowfullscreen
+                                                style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
+                                        <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
-                                    <div class="p-3 bg-white rounded border border-gray-300">
-                                        <strong class="font-title text-calendar-blue block mb-1">Artefak Unggulan:</strong>
-                                        Aplikasi Web Game Interaktif Edukasi Algoritma Pemrograman & Media LMS Canvas.
-                                    </div>
-                                </div>
 
-                                <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2 justify-between items-center">
-                                    <div class="flex gap-2">
-                                        <a href="https://drive.google.com" target="_blank" class="px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5">
-                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Artefak LMS GDrive
+                                    <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2">
+                                        <a class="course-pdf-open px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5"
+                                           href="" target="_blank" rel="noopener">
+                                            <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-                                        <button onclick="openModalWithCourse(5)" class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                            <i class="fa-solid fa-eye"></i> Detail Jawaban 7 Pertanyaan
-                                        </button>
+
+                                        <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
+                                           href="#">
+                                            <i class="fa-solid fa-file-pdf"></i> Unduh PDF
+                                        </a>
+
+                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
+                                        <a href="https://drive.google.com/file/d/1kevVkqF6mKoZGr_z67jVDrHY-1cXQCAG/view?usp=sharing" target="_blank" rel="noopener"
+                                           class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
+                                            <i class="fa-solid fa-link"></i> Link Artefak
+                                        </a>
                                     </div>
-                                    <a href="pdf/PPG7226-refleksi.pdf" download class="px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
-                                        <i class="fa-solid fa-file-pdf"></i> PDF Refleksi
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -586,98 +549,10 @@
 
             </section>
 
-            
+
         </div>
     </main>
 
-    <!-- ================= DETAIL REFLECTION MODAL (7 PERTANYAAN) ================= -->
-    <div id="reflection-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
-        <div class="relative w-full max-w-4xl bg-white border-4 border-gray-900 rounded-2xl shadow-[10px_14px_0px_rgba(0,0,0,0.9)] p-5 md:p-8 max-h-[90vh] overflow-y-auto my-6">
-
-            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 bg-rose-500 text-white rounded-full border-2 border-black flex items-center justify-center font-bold shadow-[2px_2px_0px_#000] hover:bg-rose-600 transition">
-                ✕
-            </button>
-
-            <div class="border-b-2 border-gray-800 pb-4 mb-6">
-                <div class="flex flex-wrap items-center gap-2 mb-2">
-                    <span id="modal-code" class="bg-yellow-300 text-gray-900 font-title text-xs font-bold px-2 py-0.5 rounded border border-black"></span>
-                    <span id="modal-sks" class="text-xs text-gray-600 font-bold"></span>
-                </div>
-                <h3 id="modal-title" class="font-title text-2xl md:text-3xl text-calendar-blue font-extrabold leading-tight"></h3>
-                <p id="modal-lecturers" class="text-xs text-gray-600 font-body mt-1"></p>
-            </div>
-
-            <div class="space-y-4 text-xs md:text-sm text-gray-800">
-                <div id="modal-block-q1" class="p-4 bg-yellow-50 rounded-lg border-2 border-yellow-400">
-                    <h4 class="font-title text-sm font-bold text-yellow-900 mb-1 flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-yellow-400 text-gray-900 flex items-center justify-center text-xs shrink-0">1</span>
-                        Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?
-                    </h4>
-                    <p id="modal-q1" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
-                </div>
-
-                <div id="modal-block-q2" class="p-4 bg-blue-50 rounded-lg border-2 border-blue-400">
-                    <h4 class="font-title text-sm font-bold text-blue-900 mb-1 flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-blue-400 text-gray-900 flex items-center justify-center text-xs shrink-0">2</span>
-                        Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?
-                    </h4>
-                    <p id="modal-q2" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
-                </div>
-
-                <div id="modal-block-q3" class="p-4 bg-pink-50 rounded-lg border-2 border-pink-400">
-                    <h4 class="font-title text-sm font-bold text-pink-900 mb-1 flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-pink-400 text-gray-900 flex items-center justify-center text-xs shrink-0">3</span>
-                        Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?
-                    </h4>
-                    <p id="modal-q3" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
-                </div>
-
-                <div id="modal-block-q4" class="p-4 bg-teal-50 rounded-lg border-2 border-teal-400">
-                    <h4 class="font-title text-sm font-bold text-teal-900 mb-1 flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-teal-400 text-gray-900 flex items-center justify-center text-xs shrink-0">4</span>
-                        Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?
-                    </h4>
-                    <p id="modal-q4" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
-                </div>
-
-                <div id="modal-block-q5" class="p-4 bg-emerald-50 rounded-lg border-2 border-emerald-400">
-                    <h4 class="font-title text-sm font-bold text-emerald-900 mb-1 flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-emerald-400 text-gray-900 flex items-center justify-center text-xs shrink-0">5</span>
-                        Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini?
-                    </h4>
-                    <p id="modal-q5" class="leading-relaxed text-gray-700 whitespace-pre-line font-body mb-3"></p>
-                    <a id="modal-artifact-url" href="#" target="_blank" class="inline-flex items-center gap-2 text-xs font-title font-bold text-calendar-blue bg-white px-3 py-1.5 rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-yellow-200">
-                        <i class="fa-brands fa-google-drive text-yellow-500"></i> Buka Artefak di LMS Google Drive
-                    </a>
-                </div>
-
-                <div id="modal-block-q6" class="p-4 bg-orange-50 rounded-lg border-2 border-orange-400">
-                    <h4 class="font-title text-sm font-bold text-orange-900 mb-1 flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-orange-400 text-gray-900 flex items-center justify-center text-xs shrink-0">6</span>
-                        Mengapa artefak tersebut yang saya pilih?
-                    </h4>
-                    <p id="modal-q6" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
-                </div>
-
-                <div id="modal-block-q7" class="p-4 bg-purple-50 rounded-lg border-2 border-purple-400">
-                    <h4 class="font-title text-sm font-bold text-purple-900 mb-1 flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-purple-400 text-gray-900 flex items-center justify-center text-xs shrink-0">7</span>
-                        Bagian mana dari artefak ini yang mendukung hasil refleksi saya?
-                    </h4>
-                    <p id="modal-q7" class="leading-relaxed text-gray-700 whitespace-pre-line font-body"></p>
-                </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t-2 border-gray-200 flex justify-end">
-                <button onclick="closeModal()" class="px-5 py-2 bg-calendar-blue text-white font-title font-bold text-xs rounded border border-black">
-                    Tutup
-                </button>
-            </div>
-
-        </div>
-    </div>
-
-    <script src="js/modal.js"></script>
-    <script src="js/semester1.js"></script>
+    <script src="js/accordion.js"></script>
 </body>
 </html>
