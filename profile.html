@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil — Rahma Hayuning Astuti, S.Kom. | Portofolio Seminar PPG</title>
+    <title>Profil - Rahma Hayuning Astuti, S.Kom. | Portofolio Seminar PPG</title>
 
-    <!-- Tailwind CSS & File CSS Eksternal -->
+    <!-- Tailwind CSS CDN + konfigurasi warna (WAJIB, urutan jangan dibalik) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <script src="js/tailwind-config.js"></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +16,9 @@
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="min-h-screen flex flex-col relative pb-12">
 
@@ -54,22 +57,22 @@
 
             <!-- Bookmark Navigation Tabs -->
             <nav class="flex items-end overflow-x-auto gap-1 text-xs md:text-sm font-title pb-0 scrollbar-none">
-                <a href="index.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                <a href="index.html" id="tab-btn-home" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-house"></i> <span>Beranda</span>
                 </a>
-                <a href="refleksi-semester-1.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                <a href="refleksi-semester-1.html" id="tab-btn-sem1" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-book-open"></i> <span>Refleksi Sem 1</span>
                 </a>
-                <a href="refleksi-semester-2.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                <a href="refleksi-semester-2.html" id="tab-btn-sem2" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-book-open"></i> <span>Refleksi Sem 2</span>
                 </a>
-                <a href="refleksi-ppg.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                <a href="index.html#ppg" id="tab-btn-ppg" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-award"></i> <span>Refleksi PPG</span>
                 </a>
-                <a href="kreasi-inovatif.html" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
-                    <i class="fa-solid fa-book-open"></i> <span>Kreasi Inovatif</span>
+                <a href="kreasi-inovatif.html" id="tab-btn-kreasi" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-lightbulb"></i> <span>Kreasi Inovatif</span>
                 </a>
-                <a href="profil.html" class="nav-tab-btn active px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                <a href="profile.html" id="tab-btn-profil" class="nav-tab-btn active px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-id-card"></i> <span>Profil</span>
                 </a>
             </nav>
@@ -78,9 +81,9 @@
 
     <!-- MAIN CONTAINER -->
     <main class="max-w-7xl mx-auto px-3 md:px-8 mt-4 flex-grow w-full relative z-10">
-        <div class="calendar-sheet rounded-2xl p-4 md:p-8 relative overflow-hidden space-y-8">
+        <div class="calendar-sheet rounded-2xl p-4 md:p-8 min-h-[80vh] relative overflow-hidden space-y-8">
 
-            <!-- HERO BANNER PROFIL BERSTYLE KALENDER BIRU -->
+            <!-- HERO BANNER PROFIL -->
             <div class="relative bg-calendar-blue rounded-xl p-6 md:p-10 border-4 border-gray-900 shadow-[8px_10px_0px_#1e293b] text-white overflow-hidden">
 
                 <!-- Grid Background -->
@@ -109,12 +112,12 @@
                 <!-- Banner Content -->
                 <div class="relative z-10 flex flex-col md:flex-row items-center gap-6 pt-2">
 
-                    <!-- Polaroid Photo Frame -->
+                    <!-- Polaroid Photo Frame (foto tampil utuh, tidak terpotong) -->
                     <div class="bg-white border-2 border-gray-900 rounded-lg p-2.5 shadow-[4px_4px_0px_#000] rotate-[-2deg] shrink-0 w-full max-w-[240px]">
-                        <div class="bg-gray-200 overflow-hidden rounded relative border border-gray-400 flex justify-center aspect-[3/4]">
+                        <div class="bg-gray-200 overflow-hidden rounded relative border border-gray-400">
                             <img src="assets/profile-pict.png"
                                  alt="Foto Rahma Hayuning Astuti, S.Kom."
-                                 class="w-full h-full object-cover block"
+                                 class="w-full h-auto block"
                                  onerror="this.src='https://placehold.co/500x600/1a3a7c/ffffff?text=Rahma+Hayuning+Astuti,+S.Kom.'">
                             <div class="absolute bottom-2 left-2 bg-yellow-300 border border-black px-2 py-0.5 text-[11px] font-hand font-bold text-gray-900 shadow-sm">
                                 Belajar AI, Berbagi Ilmu 💻✦
@@ -162,7 +165,62 @@
                     </div>
                 </div>
             </div>
+            <!-- SECTION VISI PRIBADI & PENDIDIKAN -->
+<div class="scrap-card p-6 md:p-8 rounded-xl bg-white relative space-y-6">
+    <div class="washi-tape"></div>
 
+    <div class="border-b-2 border-dashed border-gray-300 pb-3">
+        <h3 class="font-title text-2xl text-calendar-blue font-extrabold flex items-center gap-2">
+            <i class="fa-solid fa-eye text-yellow-500"></i> Visi Pribadi &amp; Komitmen Edukasi
+        </h3>
+        <p class="text-xs text-gray-600 font-bold mt-1">Pandangan dan arah pengembangan karier sebagai Calon Guru Informatika</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs md:text-sm font-body">
+
+        <!-- Card 1 -->
+        <div class="p-5 bg-yellow-50/80 rounded-xl border-2 border-yellow-400 space-y-2">
+            <div class="flex items-center gap-2">
+                <span class="w-7 h-7 bg-yellow-300 rounded-full border border-black flex items-center justify-center font-bold text-xs shadow-[1px_1px_0px_#000]">1</span>
+                <h4 class="font-title font-bold text-gray-900 text-base">Visi Pendidikan Indonesia</h4>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+                Mendukung terwujudnya pendidikan yang berkualitas, inklusif, dan adaptif terhadap perkembangan zaman sehingga setiap peserta didik memiliki kesempatan yang sama untuk berkembang sesuai dengan potensi, karakteristik, dan kebutuhannya.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Saya percaya bahwa pendidikan tidak hanya bertujuan meningkatkan kemampuan akademik, tetapi juga membentuk karakter, menumbuhkan semangat belajar sepanjang hayat, serta mengembangkan keterampilan abad ke-21 seperti berpikir kritis, kreativitas, kolaborasi, komunikasi, dan literasi digital agar siap menghadapi tantangan dunia yang terus berkembang.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-5 bg-blue-50/80 rounded-xl border-2 border-blue-400 space-y-2">
+            <div class="flex items-center gap-2">
+                <span class="w-7 h-7 bg-blue-300 rounded-full border border-black flex items-center justify-center font-bold text-xs shadow-[1px_1px_0px_#000]">2</span>
+                <h4 class="font-title font-bold text-gray-900 text-base">Visi Calon Guru</h4>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+                Sebagai calon guru, saya ingin menjadi pendidik yang profesional, reflektif, dan berorientasi pada kebutuhan peserta didik. Saya ingin menciptakan pembelajaran yang bermakna, aktif, dan berpusat pada peserta didik sehingga mereka tidak hanya memahami materi, tetapi juga mampu mengembangkan kemampuan berpikir, memecahkan masalah, dan belajar secara mandiri.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Dengan latar belakang di bidang Informatika, saya juga ingin memanfaatkan teknologi secara bijaksana untuk mendukung proses pembelajaran yang lebih interaktif, menarik, dan relevan, serta membangun lingkungan belajar yang menghargai keberagaman.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-5 bg-emerald-50/80 rounded-xl border-2 border-emerald-400 space-y-2">
+            <div class="flex items-center gap-2">
+                <span class="w-7 h-7 bg-emerald-300 rounded-full border border-black flex items-center justify-center font-bold text-xs shadow-[1px_1px_0px_#000]">3</span>
+                <h4 class="font-title font-bold text-gray-900 text-base">Langkah Pencapaian Visi</h4>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+                Untuk mewujudkan visi tersebut, saya akan terus mengembangkan kompetensi pedagogik, profesional, sosial, dan kepribadian melalui berbagai pelatihan, membaca referensi pendidikan, mengikuti komunitas belajar, serta melakukan refleksi secara berkala terhadap proses pembelajaran yang telah dilaksanakan.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Saya juga akan memanfaatkan teknologi dan media pembelajaran digital secara tepat, menerapkan strategi pembelajaran berpusat pada peserta didik, menggunakan asesmen umpan balik, serta menjalin komunikasi dan kolaborasi yang baik dengan rekan guru, orang tua, dan pihak sekolah.
+            </p>
+                </div>
+            </div>
+        </div>
             <!-- COMPETENCIES & CONTACT CARDS -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -182,7 +240,7 @@
                             <span class="font-title text-emerald-700 font-bold">Mahir</span>
                         </li>
                         <li class="p-2.5 bg-purple-50 rounded border border-purple-300 flex items-center justify-between">
-                            <span>Manajemen Kelas & Praktikum Lab Komputer</span>
+                            <span>Manajemen Kelas &amp; Praktikum Lab Komputer</span>
                             <span class="font-title text-emerald-700 font-bold">Teruji PPL</span>
                         </li>
                     </ul>
@@ -192,17 +250,17 @@
                 <div class="scrap-card p-6 rounded-xl bg-white relative">
                     <div class="washi-tape washi-tape-blue"></div>
                     <h3 class="font-title text-lg font-bold text-gray-900 flex items-center gap-2 mb-4">
-                        <i class="fa-solid fa-address-book text-calendar-blue"></i> Kontak & Jejaring Akademik
+                        <i class="fa-solid fa-address-book text-calendar-blue"></i> Kontak &amp; Jejaring Akademik
                     </h3>
                     <div class="space-y-3 text-xs">
-                        <a href="mailto:rahmahayuning2025@student.uny.ac.id" class="p-3 bg-gray-50 hover:bg-yellow-100 rounded border border-gray-300 flex items-center gap-3 transition block">
+                        <a href="mailto:rahmahayuning2025@student.uny.ac.id" class="p-3 bg-gray-50 hover:bg-yellow-100 rounded border border-gray-300 flex items-center gap-3 transition">
                             <i class="fa-solid fa-envelope text-red-500 text-lg"></i>
                             <div>
                                 <div class="font-bold">Email Akademik UNY</div>
                                 <div class="text-gray-500">rahmahayuning2025@student.uny.ac.id</div>
                             </div>
                         </a>
-                        <a href="https://github.com/rahmaha" target="_blank" rel="noopener" class="p-3 bg-gray-50 hover:bg-yellow-100 rounded border border-gray-300 flex items-center gap-3 transition block">
+                        <a href="https://github.com/rahmaha" target="_blank" rel="noopener" class="p-3 bg-gray-50 hover:bg-yellow-100 rounded border border-gray-300 flex items-center gap-3 transition">
                             <i class="fa-brands fa-github text-gray-900 text-lg"></i>
                             <div>
                                 <div class="font-bold">GitHub</div>
@@ -217,7 +275,6 @@
         </div>
     </main>
 
-    <!-- Script Eksternal -->
-    <script src="js/script.js"></script>
+    <!-- Halaman ini tidak butuh JavaScript tambahan -->
 </body>
 </html>

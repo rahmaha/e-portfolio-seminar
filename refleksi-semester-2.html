@@ -20,7 +20,6 @@
 <body class="min-h-screen flex flex-col relative pb-12">
 
     <!-- DESK ACCESSORIES (BACKGROUND DECORATION) -->
-    <!-- Top Left Stationery: Pencil -->
     <div class="fixed -top-6 left-4 md:left-12 z-0 pointer-events-none opacity-90 hidden sm:block">
         <svg class="w-36 h-36 transform -rotate-45 drop-shadow-md" viewBox="0 0 200 200" fill="none">
             <rect x="20" y="80" width="140" height="18" rx="2" fill="#eab308" stroke="#1e293b" stroke-width="3"/>
@@ -30,7 +29,6 @@
         </svg>
     </div>
 
-    <!-- Top Right Stationery: Red Sharpener & Star -->
     <div class="fixed top-4 right-6 md:right-16 z-0 pointer-events-none hidden md:block">
         <div class="relative w-16 h-16 bg-rose-500 border-2 border-gray-900 rounded-xl shadow-[3px_4px_0px_#000] rotate-12 flex items-center justify-center">
             <div class="w-6 h-6 bg-gray-900 rounded-full flex items-center justify-center">
@@ -44,7 +42,6 @@
     <header class="sticky top-0 z-40 bg-desk-bg/95 backdrop-blur-sm pt-4 px-3 md:px-8 border-b-2 border-gray-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-end justify-between gap-3">
 
-            <!-- Logo Brand Title -->
             <div class="flex items-center gap-3 mb-2 md:mb-0">
                 <div class="w-11 h-11 bg-calendar-blue border-2 border-gray-900 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-[2px_2px_0px_#000] rotate-[-3deg]">
                     <i class="fa-solid fa-graduation-cap"></i>
@@ -55,7 +52,6 @@
                 </div>
             </div>
 
-            <!-- Bookmark Navigation Tabs -->
             <nav class="flex items-end overflow-x-auto gap-1 text-xs md:text-sm font-title pb-0 scrollbar-none">
                 <a href="index.html" id="tab-btn-home" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-house"></i> <span>Beranda</span>
@@ -69,10 +65,10 @@
                 <a href="index.html#ppg" id="tab-btn-ppg" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-award"></i> <span>Refleksi PPG</span>
                 </a>
-                <a href="index.html#kreasi" id="tab-btn-kreasi" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                <a href="kreasi-inovatif.html" id="tab-btn-kreasi" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-lightbulb"></i> <span>Kreasi Inovatif</span>
                 </a>
-                <a href="index.html#profil" id="tab-btn-profil" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
+                <a href="profile.html" id="tab-btn-profil" class="nav-tab-btn px-3 md:px-4 py-2 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-id-card"></i> <span>Profil</span>
                 </a>
             </nav>
@@ -83,8 +79,7 @@
     <main class="max-w-7xl mx-auto px-3 md:px-8 mt-4 flex-grow w-full relative z-10">
         <div class="calendar-sheet rounded-2xl p-4 md:p-8 min-h-[80vh] relative overflow-hidden">
 
-            <!-- ================= TAB 2: REFLEKSI SEMESTER 2 (LENGKAP DENGAN SECTION 01 & SECTION 02) ================= -->
-            <section id="page-sem1" class="space-y-8">
+            <section id="page-sem2" class="space-y-8">
 
                 <!-- Page Banner Header -->
                 <div class="scrap-card p-6 rounded-xl bg-calendar-blue text-white relative overflow-hidden">
@@ -103,7 +98,7 @@
                     </div>
                 </div>
 
-                <!-- SECTION 01: PANDUAN REFLEKSI MATERI (7 PERTANYAAN STANDAR LK2 LMS PPG) -->
+                <!-- SECTION 01: PANDUAN REFLEKSI MATERI -->
                 <div class="space-y-4">
                     <div class="flex items-center justify-between border-b-2 border-gray-800 pb-2">
                         <h3 class="font-title text-2xl text-calendar-blue font-extrabold flex items-center gap-2">
@@ -154,7 +149,6 @@
                                 Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?
                             </p>
                         </div>
-
                     </div>
 
                     <p class="font-title text-sm font-bold text-gray-700 pt-2">Bagian Artefak (5–7)</p>
@@ -188,7 +182,6 @@
                                 Bagian mana dari artefak ini yang mendukung hasil refleksi saya?
                             </p>
                         </div>
-
                     </div>
                 </div>
 
@@ -200,7 +193,6 @@
                             Folder Mata Kuliah Semester 2 (5 Matkul)
                         </h3>
 
-                        <!-- Accordion Master Controls & Search -->
                         <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                             <button onclick="toggleAllAccordions(true)" class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000]">
                                 <i class="fa-solid fa-folder-open"></i> Buka Semua
@@ -211,44 +203,43 @@
                         </div>
                     </div>
 
-                    <!-- Search Input for Sem 1 -->
+                    <!-- Search Input -->
                     <div class="scrap-card p-3 rounded-xl bg-white flex items-center gap-3">
                         <i class="fa-solid fa-magnifying-glass text-gray-400 pl-2"></i>
-                        <input type="text" id="search-input" oninput="filterCourses()" placeholder="Cari kode matkul, nama matkul, atau nama dosen pengampu..."
+                        <input type="text" id="search-input" oninput="filterCourses()" placeholder="Cari nama matkul, singkatan (PSE, PMA, PPL, PKB), atau nama dosen pengampu..."
                                class="w-full text-xs md:text-sm border-none focus:outline-none bg-transparent">
                     </div>
 
-                    <!-- 6 MATKUL ACCORDION CARDS CONTAINER -->
+                    <!-- 5 MATKUL ACCORDION CARDS CONTAINER -->
                     <div class="space-y-5" id="sem1-courses-container">
-                        <!-- MATKUL 01 PSE -->
-                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PG7228 filosofi pendidikan nilai putu sudira satriyo agung dewanto">
-                            <div onclick="toggleAccordion('acc-m1')" class="p-5 bg-yellow-50 hover:bg-yellow-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
+
+                        <!-- MATKUL 01 PSE (Amber / Yellow Theme) -->
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="pembelajaran sosial emosional pse putu sudira">
+                            <div onclick="toggleAccordion('acc-m1')" class="p-5 bg-amber-100 hover:bg-amber-200/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
-                                    <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
+                                    <span class="w-10 h-10 bg-amber-500 text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
                                         01
                                     </span>
                                     <div>
-                                        <div class="flex flex-wrap items-center gap-2">
-                                            <!-- <span class="bg-yellow-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">PG7228</span>
-                                            <span class="bg-white text-gray-700 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">2 SKS</span> -->
+                                        <div class="flex flex-wrap items-center gap-2 mb-0.5">
+                                            <span class="bg-amber-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">PSE</span>
                                         </div>
-                                        <h4 class="font-title text-lg md:text-xl font-bold text-calendar-blue mt-0.5">
+                                        <h4 class="font-title text-lg md:text-xl font-bold text-gray-900">
                                             Pembelajaran Sosial Emosional
                                         </h4>
-                                        <p class="text-xs text-gray-600 font-body">
+                                        <p class="text-xs text-gray-700 font-body">
                                             <strong>Dosen Pengampu:</strong> Prof. Dr. Drs. Putu Sudira, M.P.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="text-lg text-calendar-blue font-bold px-2" id="icon-acc-m1">
+                                <div class="text-lg text-gray-900 font-bold px-2" id="icon-acc-m1">
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
                             <div id="acc-m1" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <!-- Isi link share Google Drive PDF jawaban refleksi PG7228 di data-pdf -->
                                 <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/1MYwgBk4BJDnnarypFZ6KDhmj96Y1g9ap/view?usp=sharing">
                                     <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
-                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PG7228" allow="fullscreen" allowfullscreen
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PSE" allow="fullscreen" allowfullscreen
                                                 style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
                                         <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
@@ -258,13 +249,10 @@
                                            href="#" target="_blank" rel="noopener">
                                             <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-
                                         <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
                                            href="#">
                                             <i class="fa-solid fa-file-pdf"></i> Unduh PDF
                                         </a>
-
-                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
                                         <a href="#" target="_blank" rel="noopener"
                                            class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
                                             <i class="fa-solid fa-link"></i> Link Artefak
@@ -274,35 +262,33 @@
                             </div>
                         </div>
 
-                        <!-- MATKUL 02 PMA L -->
-                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7302 pemahaman tentang peserta didik pembelajaran masduki zakariah bekti wulandari">
-                            <div onclick="toggleAccordion('acc-m2')" class="p-5 bg-blue-50 hover:bg-blue-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
+                        <!-- MATKUL 02 PMA L (Sky / Blue Theme) -->
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="pembelajaran mendalam dan asesmen lanjut pma pmal adi dewanto">
+                            <div onclick="toggleAccordion('acc-m2')" class="p-5 bg-sky-100 hover:bg-sky-200/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
-                                    <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
+                                    <span class="w-10 h-10 bg-sky-600 text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
                                         02
                                     </span>
                                     <div>
-                                        <div class="flex flex-wrap items-center gap-2">
-                                            <!-- <span class="bg-blue-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">PPG7302</span>
-                                            <span class="bg-white text-gray-700 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">3 SKS</span> -->
+                                        <div class="flex flex-wrap items-center gap-2 mb-0.5">
+                                            <span class="bg-sky-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">PMA Lanjut</span>
                                         </div>
-                                        <h4 class="font-title text-lg md:text-xl font-bold text-calendar-blue mt-0.5">
+                                        <h4 class="font-title text-lg md:text-xl font-bold text-gray-900">
                                             Pembelajaran Mendalam dan Asesmen Lanjut
                                         </h4>
-                                        <p class="text-xs text-gray-600 font-body">
+                                        <p class="text-xs text-gray-700 font-body">
                                             <strong>Dosen Pengampu:</strong> Dr. Adi Dewanto S.T., M.Kom.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="text-lg text-calendar-blue font-bold px-2" id="icon-acc-m2">
+                                <div class="text-lg text-gray-900 font-bold px-2" id="icon-acc-m2">
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
                             <div id="acc-m2" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <!-- Isi link share Google Drive PDF jawaban refleksi PPG7302 di data-pdf -->
                                 <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/1vZ_2kdJeZiT_c3N2bbsqvyArgASJHtrs/view?usp=sharing">
                                     <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
-                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPG7302" allow="fullscreen" allowfullscreen
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PMA Lanjut" allow="fullscreen" allowfullscreen
                                                 style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
                                         <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
@@ -312,13 +298,10 @@
                                            href="#" target="_blank" rel="noopener">
                                             <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-
                                         <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
                                            href="#">
                                             <i class="fa-solid fa-file-pdf"></i> Unduh PDF
                                         </a>
-
-                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
                                         <a href="https://drive.google.com/file/d/1FAi5ApbT-gMyYT6rIxSadFzQuPQi24x-/view?usp=sharing" target="_blank" rel="noopener"
                                            class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
                                             <i class="fa-solid fa-link"></i> Link Artefak
@@ -328,35 +311,33 @@
                             </div>
                         </div>
 
-                        <!-- MATKUL 03 PPL Mandiri -->
-                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7607 praktik pengalaman lapangan ppl terbimbing masduki zakariah">
-                            <div onclick="toggleAccordion('acc-m4')" class="p-5 bg-purple-50 hover:bg-purple-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
+                        <!-- MATKUL 03 PPL Mandiri (Emerald / Green Theme) -->
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="praktik pengalaman lapangan ppl mandiri masduki zakariah">
+                            <div onclick="toggleAccordion('acc-m4')" class="p-5 bg-emerald-100 hover:bg-emerald-200/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
-                                    <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
+                                    <span class="w-10 h-10 bg-emerald-600 text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
                                         03
                                     </span>
                                     <div>
-                                        <div class="flex flex-wrap items-center gap-2">
-                                            <!-- <span class="bg-purple-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">PPG7607</span>
-                                            <span class="bg-white text-gray-700 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">6 SKS</span> -->
+                                        <div class="flex flex-wrap items-center gap-2 mb-0.5">
+                                            <span class="bg-emerald-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">PPL Mandiri</span>
                                         </div>
-                                        <h4 class="font-title text-lg md:text-xl font-bold text-calendar-blue mt-0.5">
+                                        <h4 class="font-title text-lg md:text-xl font-bold text-gray-900">
                                             Praktik Pengalaman Lapangan (PPL) Mandiri
                                         </h4>
-                                        <p class="text-xs text-gray-600 font-body">
+                                        <p class="text-xs text-gray-700 font-body">
                                             <strong>Dosen Pengampu:</strong> Dr. Ir. Drs. Masduki Zakariah, M.T.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="text-lg text-calendar-blue font-bold px-2" id="icon-acc-m4">
+                                <div class="text-lg text-gray-900 font-bold px-2" id="icon-acc-m4">
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
                             <div id="acc-m4" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <!-- Isi link share Google Drive PDF jawaban refleksi PPG7607 di data-pdf -->
                                 <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/1hN3f1mbNjTRHNoFSFHSD9rorf7BHOE1C/view?usp=sharing">
                                     <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
-                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPG7607" allow="fullscreen" allowfullscreen
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPL Mandiri" allow="fullscreen" allowfullscreen
                                                 style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
                                         <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
@@ -366,13 +347,10 @@
                                            href="#" target="_blank" rel="noopener">
                                             <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-
                                         <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
                                            href="#">
                                             <i class="fa-solid fa-file-pdf"></i> Unduh PDF
                                         </a>
-
-                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
                                         <a href="https://rahmaha.github.io/flowchart-mission/" target="_blank" rel="noopener"
                                            class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
                                             <i class="fa-solid fa-link"></i> Link Artefak
@@ -382,35 +360,33 @@
                             </div>
                         </div>
 
-                        <!-- MATKUL 04 Proyek Kepemimpinan -->
-                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7230 pola pikir bertumbuh growth mindset adi dewanto">
-                            <div onclick="toggleAccordion('acc-m5')" class="p-5 bg-orange-50 hover:bg-orange-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
+                        <!-- MATKUL 04 Proyek Kepemimpinan (Purple Theme) -->
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="proyek kepemimpinan rahmatul irfan">
+                            <div onclick="toggleAccordion('acc-m5')" class="p-5 bg-purple-100 hover:bg-purple-200/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
-                                    <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
+                                    <span class="w-10 h-10 bg-purple-600 text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
                                         04
                                     </span>
                                     <div>
-                                        <div class="flex flex-wrap items-center gap-2">
-                                            <!-- <span class="bg-orange-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">PPG7230</span>
-                                            <span class="bg-white text-gray-700 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">2 SKS</span> -->
+                                        <div class="flex flex-wrap items-center gap-2 mb-0.5">
+                                            <span class="bg-purple-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">Proyek Kepemimpinan</span>
                                         </div>
-                                        <h4 class="font-title text-lg md:text-xl font-bold text-calendar-blue mt-0.5">
+                                        <h4 class="font-title text-lg md:text-xl font-bold text-gray-900">
                                             Proyek Kepemimpinan
                                         </h4>
-                                        <p class="text-xs text-gray-600 font-body">
+                                        <p class="text-xs text-gray-700 font-body">
                                             <strong>Dosen Pengampu:</strong> Dr.Phil Rahmatul Irfan, S.T., M.T.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="text-lg text-calendar-blue font-bold px-2" id="icon-acc-m5">
+                                <div class="text-lg text-gray-900 font-bold px-2" id="icon-acc-m5">
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
                             <div id="acc-m5" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <!-- Isi link share Google Drive PDF jawaban refleksi PPG7230 di data-pdf -->
                                 <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/1XqXALuuexSz72B5y1hwPbHcn7PKJvhi2/view?usp=sharing">
                                     <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
-                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPG7230" allow="fullscreen" allowfullscreen
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi Proyek Kepemimpinan" allow="fullscreen" allowfullscreen
                                                 style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
                                         <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
@@ -420,13 +396,10 @@
                                            href="#" target="_blank" rel="noopener">
                                             <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-
                                         <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
                                            href="#">
                                             <i class="fa-solid fa-file-pdf"></i> Unduh PDF
                                         </a>
-
-                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
                                         <a href="https://rahmaha.github.io/workshop-portfolio/" target="_blank" rel="noopener"
                                            class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
                                             <i class="fa-solid fa-link"></i> Link Artefak
@@ -436,51 +409,46 @@
                             </div>
                         </div>
 
-                        <!-- MATKUL 05  PKB -->
-                         <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="PPG7226 pembelajaran kreatif inovatif priyanto">
-                            <div onclick="toggleAccordion('acc-m6')" class="p-5 bg-teal-50 hover:bg-teal-100/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
+                        <!-- MATKUL 05 PKB (Rose / Pink Theme) -->
+                        <div class="course-card scrap-card rounded-xl bg-white overflow-hidden border-2 border-gray-900" data-keywords="pembelajaran kreatif inovatif pkb priyanto">
+                            <div onclick="toggleAccordion('acc-m6')" class="p-5 bg-rose-100 hover:bg-rose-200/80 cursor-pointer flex items-center justify-between transition border-b-2 border-gray-900">
                                 <div class="flex items-center gap-3">
-                                    <span class="w-10 h-10 bg-calendar-blue text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0">
-                                        04
+                                    <span class="w-10 h-10 bg-rose-500 text-white rounded-lg border border-black font-title font-bold text-sm flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
+                                        05
                                     </span>
                                     <div>
-                                        <!-- <div class="flex flex-wrap items-center gap-2">
-                                            <span class="bg-teal-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">PPG7226</span>
-                                            <span class="bg-white text-gray-700 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">2 SKS</span>
-                                        </div> -->
-                                        <h4 class="font-title text-lg md:text-xl font-bold text-calendar-blue mt-0.5">
+                                        <div class="flex flex-wrap items-center gap-2 mb-0.5">
+                                            <span class="bg-rose-300 text-gray-900 font-title text-[10px] font-bold px-2 py-0.5 rounded border border-black">PKB</span>
+                                        </div>
+                                        <h4 class="font-title text-lg md:text-xl font-bold text-gray-900">
                                             Pembelajaran Kreatif Inovatif
                                         </h4>
-                                        <p class="text-xs text-gray-600 font-body">
+                                        <p class="text-xs text-gray-700 font-body">
                                             <strong>Dosen Pengampu:</strong> Dr. Ir. Drs. Priyanto, M.Kom.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="text-lg text-calendar-blue font-bold px-2" id="icon-acc-m6">
+                                <div class="text-lg text-gray-900 font-bold px-2" id="icon-acc-m6">
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
                             <div id="acc-m6" class="accordion-content hidden p-6 space-y-4 bg-paper-cream border-t border-gray-200">
-                                <!-- Isi link share Google Drive PDF jawaban refleksi PPG7226 di data-pdf -->
                                 <div class="course-pdf space-y-4" data-pdf="https://drive.google.com/file/d/1vMzMvbUdkCJa-k4TzSycpgDCj6P0NxlB/view?usp=sharing">
                                     <div class="rounded-lg overflow-hidden border-2 border-gray-900 bg-gray-100">
-                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PPG7226" allow="fullscreen" allowfullscreen
+                                        <iframe class="course-pdf-frame" title="Preview PDF Refleksi PKB" allow="fullscreen" allowfullscreen
                                                 style="display:block; width:100%; height:75vh; min-height:480px; border:0; background:#fff;"></iframe>
                                         <p class="course-pdf-empty hidden p-6 text-center text-xs text-gray-500 font-body">Link PDF belum diisi.</p>
                                     </div>
 
                                     <div class="pt-3 border-t border-gray-300 flex flex-wrap gap-2">
                                         <a class="course-pdf-open px-3 py-1.5 bg-calendar-blue text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] hover:bg-blue-900 flex items-center gap-1.5"
-                                           href="" target="_blank" rel="noopener">
+                                           href="#" target="_blank" rel="noopener">
                                             <i class="fa-brands fa-google-drive text-yellow-300"></i> Buka PDF di Google Drive
                                         </a>
-
                                         <a class="course-pdf-download px-3 py-1.5 bg-rose-500 hover:bg-rose-600 text-white font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5"
                                            href="#">
                                             <i class="fa-solid fa-file-pdf"></i> Unduh PDF
                                         </a>
-
-                                        <!-- Link artefak: salin blok <a> ini kalau artefaknya lebih dari satu -->
                                         <a href="https://drive.google.com/file/d/14UrgFqnRvBCOf9QgBt9Dj6uYdjjjBr9-/view?usp=sharing" target="_blank" rel="noopener"
                                            class="px-3 py-1.5 bg-yellow-300 hover:bg-yellow-400 text-gray-900 font-title text-xs font-bold rounded border border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
                                             <i class="fa-solid fa-link"></i> Link Artefak
@@ -489,11 +457,11 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
             </section>
-
 
         </div>
     </main>
